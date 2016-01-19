@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -310,12 +311,29 @@
                                     <constraint firstAttribute="width" secondItem="ZgQ-6C-Izy" secondAttribute="height" multiplier="1:1" id="Zom-qK-ZjE"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Colour label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-rr-1Af">
-                                <rect key="frame" x="254.5" y="290.5" width="91.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="eMV-Gu-syX">
+                                <rect key="frame" x="165" y="256.5" width="270" height="87.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="R:0 G:0 B:0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-rr-1Af" userLabel="RGB">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="H: 0 S:0 L:0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-PO-eKz" userLabel="HSL">
+                                        <rect key="frame" x="0.0" y="33.5" width="270" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="#000000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yy-5x-sMV" userLabel="HEX">
+                                        <rect key="frame" x="0.0" y="67" width="270" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-BC-mei">
                                 <rect key="frame" x="0.0" y="20" width="63" height="34"/>
                                 <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
@@ -329,17 +347,18 @@
                         <constraints>
                             <constraint firstItem="ZgQ-6C-Izy" firstAttribute="centerX" secondItem="hwV-B7-1I3" secondAttribute="centerX" id="9As-ER-jfn"/>
                             <constraint firstItem="kRv-BC-mei" firstAttribute="top" secondItem="Ovw-n7-qFo" secondAttribute="bottom" id="GBB-gZ-aWx"/>
-                            <constraint firstItem="Wm6-rr-1Af" firstAttribute="leading" secondItem="ZgQ-6C-Izy" secondAttribute="leading" priority="900" constant="20" id="GHH-7d-Ml8"/>
-                            <constraint firstItem="ZgQ-6C-Izy" firstAttribute="trailing" secondItem="Wm6-rr-1Af" secondAttribute="trailing" priority="900" constant="20" id="GdT-vv-zuf"/>
-                            <constraint firstItem="Wm6-rr-1Af" firstAttribute="centerX" secondItem="hwV-B7-1I3" secondAttribute="centerX" id="abV-Tt-xv6"/>
-                            <constraint firstItem="Wm6-rr-1Af" firstAttribute="centerY" secondItem="hwV-B7-1I3" secondAttribute="centerY" id="mha-0I-oyd"/>
+                            <constraint firstItem="eMV-Gu-syX" firstAttribute="width" secondItem="ZgQ-6C-Izy" secondAttribute="width" multiplier="0.9" id="Z3B-Ql-R6R"/>
+                            <constraint firstItem="eMV-Gu-syX" firstAttribute="centerY" secondItem="ZgQ-6C-Izy" secondAttribute="centerY" id="kS0-ir-wg5"/>
+                            <constraint firstItem="eMV-Gu-syX" firstAttribute="centerX" secondItem="ZgQ-6C-Izy" secondAttribute="centerX" id="nOk-gK-AIg"/>
                             <constraint firstAttribute="leading" secondItem="kRv-BC-mei" secondAttribute="leading" id="nQh-SU-rIN"/>
                             <constraint firstItem="ZgQ-6C-Izy" firstAttribute="centerY" secondItem="hwV-B7-1I3" secondAttribute="centerY" id="wp3-tg-J8H"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="circleView" destination="ZgQ-6C-Izy" id="KA1-MD-qro"/>
-                        <outlet property="colorLabel" destination="Wm6-rr-1Af" id="hH2-SH-8gW"/>
+                        <outlet property="colorLabelHSL" destination="Ywx-PO-eKz" id="is9-Df-6ME"/>
+                        <outlet property="colorLabelHex" destination="6yy-5x-sMV" id="nSb-ex-IJk"/>
+                        <outlet property="colorLabelRGB" destination="Wm6-rr-1Af" id="G1r-yS-b8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRw-WM-eBX" sceneMemberID="firstResponder"/>

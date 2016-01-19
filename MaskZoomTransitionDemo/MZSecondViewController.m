@@ -11,7 +11,9 @@
 @interface MZSecondViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *circleView;
-@property (weak, nonatomic) IBOutlet UILabel *colorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *colorLabelRGB;
+@property (weak, nonatomic) IBOutlet UILabel *colorLabelHSL;
+@property (weak, nonatomic) IBOutlet UILabel *colorLabelHex;
 
 - (IBAction)close:(UIButton *)button;
 
@@ -24,7 +26,22 @@
     [super viewDidLoad];
 
     self.circleView.backgroundColor = self.circleColor;
-    self.colorLabel.text = self.circleColor.description;
+    [self setColorLabels];
+}
+
+- (void)setColorLabels
+{
+    CGFloat r = 0.0, g = 0.0, b = 0.0;
+    CGFloat h = 0.0, s = 0.0, l = 0.0;
+    [self.circleColor getRed:&r green:&g blue:&b alpha:NULL];
+    [self.circleColor getHue:&h saturation:&s brightness:&l alpha:NULL];
+
+    int red = r * 255, green = g * 255, blue = b * 255;
+    int hue = h * 100, saturation = s * 100, lightness = l * 100;
+
+    self.colorLabelRGB.text = [NSString stringWithFormat:@"R:%d G:%d B:%d", red, green, blue];
+    self.colorLabelHSL.text = [NSString stringWithFormat:@"H:%d S:%d L:%d", hue, saturation, lightness];
+    self.colorLabelHex.text = [NSString stringWithFormat:@"#%02X%02X%02X", red, green, blue];
 }
 
 #pragma mark - Actions
@@ -40,7 +57,7 @@
 
 - (NSArray *)viewsToFadeIn
 {
-    return @[self.colorLabel];
+    return @[self.colorLabelRGB, self.colorLabelHSL, self.colorLabelHex];
 }
 
 - (UIView *)largeView
