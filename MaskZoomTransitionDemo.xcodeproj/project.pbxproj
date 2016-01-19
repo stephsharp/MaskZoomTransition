@@ -20,6 +20,8 @@
 		8284FB561C21295600CD7642 /* MZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB551C21295600CD7642 /* MZFirstViewController.m */; };
 		8284FB591C21296100CD7642 /* MZSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB581C21296100CD7642 /* MZSecondViewController.m */; };
 		82B6ACB21C235B8C00734CCC /* MZCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ACB11C235B8C00734CCC /* MZCircleButton.m */; };
+		82B6AD331C4DF30A00734CCC /* Colours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B6AD311C4DF30A00734CCC /* Colours.storyboard */; };
+		82B6AD361C4DF3B400734CCC /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B6AD341C4DF3B400734CCC /* People.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		8284FB581C21296100CD7642 /* MZSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSecondViewController.m; sourceTree = "<group>"; };
 		82B6ACB01C235B8C00734CCC /* MZCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCircleButton.h; sourceTree = "<group>"; };
 		82B6ACB11C235B8C00734CCC /* MZCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCircleButton.m; sourceTree = "<group>"; };
+		82B6AD321C4DF30A00734CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Colours.storyboard; sourceTree = "<group>"; };
+		82B6AD351C4DF3B400734CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/People.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				82B6ACB01C235B8C00734CCC /* MZCircleButton.h */,
 				82B6ACB11C235B8C00734CCC /* MZCircleButton.m */,
 				8284FB331C21203500CD7642 /* Main.storyboard */,
+				82B6AD311C4DF30A00734CCC /* Colours.storyboard */,
+				82B6AD341C4DF3B400734CCC /* People.storyboard */,
 				8284FB361C21203500CD7642 /* Assets.xcassets */,
 				8284FB381C21203500CD7642 /* LaunchScreen.storyboard */,
 				8284FB3B1C21203500CD7642 /* Info.plist */,
@@ -181,6 +187,8 @@
 			files = (
 				8284FB3A1C21203500CD7642 /* LaunchScreen.storyboard in Resources */,
 				8284FB371C21203500CD7642 /* Assets.xcassets in Resources */,
+				82B6AD361C4DF3B400734CCC /* People.storyboard in Resources */,
+				82B6AD331C4DF30A00734CCC /* Colours.storyboard in Resources */,
 				8284FB351C21203500CD7642 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +230,22 @@
 				8284FB391C21203500CD7642 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		82B6AD311C4DF30A00734CCC /* Colours.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82B6AD321C4DF30A00734CCC /* Base */,
+			);
+			name = Colours.storyboard;
+			sourceTree = "<group>";
+		};
+		82B6AD341C4DF3B400734CCC /* People.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82B6AD351C4DF3B400734CCC /* Base */,
+			);
+			name = People.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
