@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		8284FB2C1C21203500CD7642 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB2B1C21203500CD7642 /* main.m */; };
 		8284FB2F1C21203500CD7642 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB2E1C21203500CD7642 /* AppDelegate.m */; };
-		8284FB321C21203500CD7642 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB311C21203500CD7642 /* ViewController.m */; };
 		8284FB351C21203500CD7642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8284FB331C21203500CD7642 /* Main.storyboard */; };
 		8284FB371C21203500CD7642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8284FB361C21203500CD7642 /* Assets.xcassets */; };
 		8284FB3A1C21203500CD7642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8284FB381C21203500CD7642 /* LaunchScreen.storyboard */; };
+		8284FB481C21211500CD7642 /* MZGradientCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB431C21211500CD7642 /* MZGradientCircleLayer.m */; };
+		8284FB491C21211500CD7642 /* MZMaskZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB451C21211500CD7642 /* MZMaskZoomTransition.m */; };
+		8284FB4A1C21211500CD7642 /* MZMaskZoomTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB471C21211500CD7642 /* MZMaskZoomTransitioningDelegate.m */; };
+		8284FB4D1C2122BB00CD7642 /* MZCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB4C1C2122BB00CD7642 /* MZCircleView.m */; };
+		8284FB501C2123DA00CD7642 /* UIViewController+MZContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB4F1C2123DA00CD7642 /* UIViewController+MZContentViewController.m */; };
+		8284FB561C21295600CD7642 /* MZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB551C21295600CD7642 /* MZFirstViewController.m */; };
+		8284FB591C21296100CD7642 /* MZSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB581C21296100CD7642 /* MZSecondViewController.m */; };
+		82B6ACB21C235B8C00734CCC /* MZCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ACB11C235B8C00734CCC /* MZCircleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +27,26 @@
 		8284FB2B1C21203500CD7642 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8284FB2D1C21203500CD7642 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8284FB2E1C21203500CD7642 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8284FB301C21203500CD7642 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8284FB311C21203500CD7642 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8284FB341C21203500CD7642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8284FB361C21203500CD7642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8284FB391C21203500CD7642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8284FB3B1C21203500CD7642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8284FB421C21211500CD7642 /* MZGradientCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGradientCircleLayer.h; sourceTree = "<group>"; };
+		8284FB431C21211500CD7642 /* MZGradientCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGradientCircleLayer.m; sourceTree = "<group>"; };
+		8284FB441C21211500CD7642 /* MZMaskZoomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMaskZoomTransition.h; sourceTree = "<group>"; };
+		8284FB451C21211500CD7642 /* MZMaskZoomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMaskZoomTransition.m; sourceTree = "<group>"; };
+		8284FB461C21211500CD7642 /* MZMaskZoomTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMaskZoomTransitioningDelegate.h; sourceTree = "<group>"; };
+		8284FB471C21211500CD7642 /* MZMaskZoomTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMaskZoomTransitioningDelegate.m; sourceTree = "<group>"; };
+		8284FB4B1C2122BB00CD7642 /* MZCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCircleView.h; sourceTree = "<group>"; };
+		8284FB4C1C2122BB00CD7642 /* MZCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCircleView.m; sourceTree = "<group>"; };
+		8284FB4E1C2123DA00CD7642 /* UIViewController+MZContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MZContentViewController.h"; sourceTree = "<group>"; };
+		8284FB4F1C2123DA00CD7642 /* UIViewController+MZContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MZContentViewController.m"; sourceTree = "<group>"; };
+		8284FB541C21295600CD7642 /* MZFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFirstViewController.h; sourceTree = "<group>"; };
+		8284FB551C21295600CD7642 /* MZFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFirstViewController.m; sourceTree = "<group>"; };
+		8284FB571C21296100CD7642 /* MZSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSecondViewController.h; sourceTree = "<group>"; };
+		8284FB581C21296100CD7642 /* MZSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSecondViewController.m; sourceTree = "<group>"; };
+		82B6ACB01C235B8C00734CCC /* MZCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCircleButton.h; sourceTree = "<group>"; };
+		82B6ACB11C235B8C00734CCC /* MZCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCircleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +63,7 @@
 		8284FB1E1C21203500CD7642 = {
 			isa = PBXGroup;
 			children = (
+				8284FB411C21211500CD7642 /* MaskZoomTransition */,
 				8284FB291C21203500CD7642 /* MaskZoomTransitionDemo */,
 				8284FB281C21203500CD7642 /* Products */,
 			);
@@ -60,8 +82,14 @@
 			children = (
 				8284FB2D1C21203500CD7642 /* AppDelegate.h */,
 				8284FB2E1C21203500CD7642 /* AppDelegate.m */,
-				8284FB301C21203500CD7642 /* ViewController.h */,
-				8284FB311C21203500CD7642 /* ViewController.m */,
+				8284FB541C21295600CD7642 /* MZFirstViewController.h */,
+				8284FB551C21295600CD7642 /* MZFirstViewController.m */,
+				8284FB571C21296100CD7642 /* MZSecondViewController.h */,
+				8284FB581C21296100CD7642 /* MZSecondViewController.m */,
+				8284FB4B1C2122BB00CD7642 /* MZCircleView.h */,
+				8284FB4C1C2122BB00CD7642 /* MZCircleView.m */,
+				82B6ACB01C235B8C00734CCC /* MZCircleButton.h */,
+				82B6ACB11C235B8C00734CCC /* MZCircleButton.m */,
 				8284FB331C21203500CD7642 /* Main.storyboard */,
 				8284FB361C21203500CD7642 /* Assets.xcassets */,
 				8284FB381C21203500CD7642 /* LaunchScreen.storyboard */,
@@ -77,6 +105,21 @@
 				8284FB2B1C21203500CD7642 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8284FB411C21211500CD7642 /* MaskZoomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				8284FB421C21211500CD7642 /* MZGradientCircleLayer.h */,
+				8284FB431C21211500CD7642 /* MZGradientCircleLayer.m */,
+				8284FB441C21211500CD7642 /* MZMaskZoomTransition.h */,
+				8284FB451C21211500CD7642 /* MZMaskZoomTransition.m */,
+				8284FB461C21211500CD7642 /* MZMaskZoomTransitioningDelegate.h */,
+				8284FB471C21211500CD7642 /* MZMaskZoomTransitioningDelegate.m */,
+				8284FB4E1C2123DA00CD7642 /* UIViewController+MZContentViewController.h */,
+				8284FB4F1C2123DA00CD7642 /* UIViewController+MZContentViewController.m */,
+			);
+			path = MaskZoomTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8284FB321C21203500CD7642 /* ViewController.m in Sources */,
+				8284FB591C21296100CD7642 /* MZSecondViewController.m in Sources */,
+				8284FB481C21211500CD7642 /* MZGradientCircleLayer.m in Sources */,
 				8284FB2F1C21203500CD7642 /* AppDelegate.m in Sources */,
+				8284FB4A1C21211500CD7642 /* MZMaskZoomTransitioningDelegate.m in Sources */,
+				8284FB561C21295600CD7642 /* MZFirstViewController.m in Sources */,
+				8284FB4D1C2122BB00CD7642 /* MZCircleView.m in Sources */,
+				82B6ACB21C235B8C00734CCC /* MZCircleButton.m in Sources */,
+				8284FB501C2123DA00CD7642 /* UIViewController+MZContentViewController.m in Sources */,
+				8284FB491C21211500CD7642 /* MZMaskZoomTransition.m in Sources */,
 				8284FB2C1C21203500CD7642 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +350,7 @@
 				8284FB401C21203500CD7642 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

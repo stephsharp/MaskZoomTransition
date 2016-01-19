@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MZFirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64k-FG-eiQ" customClass="MZCircleView">
+                                <rect key="frame" x="540" y="28" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.94117647409439087" green="0.80000001192092896" blue="0.12549020349979401" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7pf-uO-RXZ"/>
+                                    <constraint firstAttribute="width" secondItem="64k-FG-eiQ" secondAttribute="height" multiplier="1:1" id="kja-yO-dfE"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-sf-IGu" customClass="MZCircleButton">
+                                <rect key="frame" x="20" y="100" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.039215686274509803" green="0.37647058823529411" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Af8-85-bGx"/>
+                                    <constraint firstAttribute="width" secondItem="Nea-sf-IGu" secondAttribute="height" id="jB0-or-JzR"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37y-qq-pMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="64k-FG-eiQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ntg-le-eDb"/>
+                            <constraint firstItem="64k-FG-eiQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e3N-ae-phT"/>
+                            <constraint firstItem="Nea-sf-IGu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="ki6-Pt-gxr"/>
+                            <constraint firstItem="Nea-sf-IGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nTk-HB-zVF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleButton" destination="Nea-sf-IGu" id="RIv-Px-Th3"/>
+                        <outlet property="circleView" destination="64k-FG-eiQ" id="WRL-nF-9f6"/>
+                        <segue destination="hJl-vg-UOT" kind="presentation" identifier="MaskZoomSegue" id="Ug8-Nr-9vI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="353"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="OIb-oP-fvN">
+            <objects>
+                <viewController id="hJl-vg-UOT" customClass="MZSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ovw-n7-qFo"/>
+                        <viewControllerLayoutGuide type="bottom" id="9tR-Ml-o5I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hwV-B7-1I3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgQ-6C-Izy" customClass="MZCircleView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="BOc-uP-QRQ"/>
+                                    <constraint firstAttribute="width" secondItem="ZgQ-6C-Izy" secondAttribute="height" multiplier="1:1" id="Zom-qK-ZjE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Colour label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-rr-1Af">
+                                <rect key="frame" x="254.5" y="290.5" width="91.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZgQ-6C-Izy" firstAttribute="centerX" secondItem="hwV-B7-1I3" secondAttribute="centerX" id="9As-ER-jfn"/>
+                            <constraint firstItem="Wm6-rr-1Af" firstAttribute="leading" secondItem="ZgQ-6C-Izy" secondAttribute="leading" priority="900" constant="20" id="GHH-7d-Ml8"/>
+                            <constraint firstItem="ZgQ-6C-Izy" firstAttribute="trailing" secondItem="Wm6-rr-1Af" secondAttribute="trailing" priority="900" constant="20" id="GdT-vv-zuf"/>
+                            <constraint firstItem="Wm6-rr-1Af" firstAttribute="centerX" secondItem="hwV-B7-1I3" secondAttribute="centerX" id="abV-Tt-xv6"/>
+                            <constraint firstItem="Wm6-rr-1Af" firstAttribute="centerY" secondItem="hwV-B7-1I3" secondAttribute="centerY" id="mha-0I-oyd"/>
+                            <constraint firstItem="ZgQ-6C-Izy" firstAttribute="centerY" secondItem="hwV-B7-1I3" secondAttribute="centerY" id="wp3-tg-J8H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleView" destination="ZgQ-6C-Izy" id="KA1-MD-qro"/>
+                        <outlet property="colorLabel" destination="Wm6-rr-1Af" id="hH2-SH-8gW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRw-WM-eBX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="353"/>
         </scene>
     </scenes>
 </document>
