@@ -13,21 +13,12 @@
 
 @interface MZFirstViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *circleButton;
-@property (weak, nonatomic) IBOutlet UIView *circleView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *circleButtons;
 @property (nonatomic) MZMaskZoomTransitioningDelegate *transitioningDelegate;
 
 @end
 
 @implementation MZFirstViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTap:)];
-    [self.circleView addGestureRecognizer:tap];
-}
 
 #pragma mark - Properties
 
@@ -53,19 +44,12 @@
 //    UIViewController *contentViewController = segue.destinationViewController.mz_contentViewController;
 
     if ([[segue identifier] isEqualToString:@"MaskZoomSegue"]) {
-        UIView *smallView;
-
-        if ([sender isKindOfClass:[UIButton class]]) {
-            smallView = self.circleButton;
-        }
-        else {
-            smallView = self.circleView;
-        }
-
         MZSecondViewController *secondVC = (MZSecondViewController *)segue.destinationViewController;
-        secondVC.circleColor = smallView.backgroundColor;
+        UIButton *button = (UIButton *)sender;
 
-        self.transitioningDelegate.smallView = smallView;
+        secondVC.circleColor = button.backgroundColor;
+        self.transitioningDelegate.smallView = button;
+
         segue.destinationViewController.transitioningDelegate = self.transitioningDelegate;
         segue.destinationViewController.modalPresentationStyle = UIModalPresentationCustom;
     }

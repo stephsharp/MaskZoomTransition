@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIView *circleView;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabel;
 
+- (IBAction)close:(UIButton *)button;
+
 @end
 
 @implementation MZSecondViewController
@@ -23,6 +25,13 @@
 
     self.circleView.backgroundColor = self.circleColor;
     self.colorLabel.text = self.circleColor.description;
+}
+
+#pragma mark - Actions
+
+- (void)close:(UIButton *)button
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - MZMaskZoomTransitionPresentedViewController
