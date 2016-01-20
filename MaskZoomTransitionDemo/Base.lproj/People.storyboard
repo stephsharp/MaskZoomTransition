@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--People Table View Controller-->
+        <!--People-->
         <scene sceneID="RLr-Td-r1W">
             <objects>
                 <tableViewController id="85e-ix-ZjR" customClass="MZPeopleTableViewController" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             <outlet property="delegate" destination="85e-ix-ZjR" id="InS-9Q-Ghd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1m0-El-mrK"/>
+                    <navigationItem key="navigationItem" title="People" id="1m0-El-mrK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cX9-SA-Qbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
