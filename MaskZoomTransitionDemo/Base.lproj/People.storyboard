@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--People Table View Controller-->
@@ -34,14 +35,14 @@
                                                 <constraint firstAttribute="width" constant="48" id="FOj-aQ-NfM"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1o-6D-ysZ">
-                                            <rect key="frame" x="88" y="14" width="471" height="18"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1o-6D-ysZ">
+                                            <rect key="frame" x="88" y="14" width="39.5" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.031825918699999997" green="0.0" blue="0.13810221850000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-zF-xoA">
-                                            <rect key="frame" x="88" y="36" width="471" height="15.5"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-zF-xoA">
+                                            <rect key="frame" x="88" y="36" width="32" height="15.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" red="0.4377989477" green="0.4377989477" blue="0.4377989477" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -49,7 +50,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="vzZ-UP-owX" firstAttribute="leading" secondItem="YnF-kc-SVm" secondAttribute="leading" constant="16" id="5gs-oV-xzO"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="F1o-6D-ysZ" secondAttribute="trailing" id="6o0-ax-ROr"/>
                                         <constraint firstItem="TJo-zF-xoA" firstAttribute="leading" secondItem="F1o-6D-ysZ" secondAttribute="leading" id="KC0-S9-auj"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="TJo-zF-xoA" secondAttribute="trailing" id="NJe-gP-V6t"/>
                                         <constraint firstItem="vzZ-UP-owX" firstAttribute="centerY" secondItem="F1o-6D-ysZ" secondAttribute="bottom" id="OFV-mc-CXr"/>
                                         <constraint firstAttribute="centerY" secondItem="vzZ-UP-owX" secondAttribute="centerY" id="Orm-lL-52H"/>
                                         <constraint firstItem="F1o-6D-ysZ" firstAttribute="leading" secondItem="vzZ-UP-owX" secondAttribute="trailing" constant="24" id="R7E-F0-B6Q"/>
