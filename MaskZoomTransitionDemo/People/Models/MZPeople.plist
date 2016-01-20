@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>firstName</key>
+		<string>Stephanie</string>
+		<key>lastName</key>
+		<string>Sharp</string>
+		<key>role</key>
+		<string>Mobile Engineer</string>
+		<key>location</key>
+		<string>Melbourne</string>
+		<key>department</key>
+		<string>Digital</string>
+		<key>email</key>
+		<string>ssharp@company.com</string>
+		<key>mobile</key>
+		<string>0411 222 333</string>
+		<key>phone</key>
+		<string>03 9999 8888</string>
+		<key>thumbnailImage</key>
+		<string>ssharp-thumbnail</string>
+		<key>profileImage</key>
+		<string>ssharp-profile</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Another</string>
+		<key>lastName</key>
+		<string>Person</string>
+		<key>role</key>
+		<string>Software Engineer</string>
+		<key>location</key>
+		<string>Sydney</string>
+		<key>department</key>
+		<string>Automation</string>
+		<key>email</key>
+		<string>aperson@company.com</string>
+		<key>mobile</key>
+		<string>0488 777 666</string>
+		<key>phone</key>
+		<string>02 7777 5555</string>
+		<key>thumbnailImage</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+	</dict>
+</array>
+</plist>
