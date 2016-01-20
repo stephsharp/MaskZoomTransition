@@ -28,6 +28,8 @@
                        department:(NSString *)department
                             email:(NSString *)email
                            mobile:(NSString *)mobile
-                            phone:(NSString *)phone;
+                            phone:(NSString *)phone
+               thumbnailImageName:(NSString *)thumbnailImageName
+                 profileImageName:(NSString *)profileImageName NS_DESIGNATED_INITIALIZER;
 
 @end

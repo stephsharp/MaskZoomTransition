@@ -18,6 +18,8 @@
                             email:(NSString *)email
                            mobile:(NSString *)mobile
                             phone:(NSString *)phone
+               thumbnailImageName:(NSString *)thumbnailImageName
+                 profileImageName:(NSString *)profileImageName
 {
     self = [super init];
     if (self) {
@@ -29,13 +31,15 @@
         _email = email;
         _mobile = mobile;
         _phone = phone;
+        _thumbnailImageName = thumbnailImageName;
+        _profileImageName = profileImageName;
     }
     return self;
 }
 
 - (instancetype)init
 {
-    return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil];
+    return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil thumbnailImageName:nil profileImageName:nil];
 }
 
 @end

@@ -47,6 +47,7 @@
 
     cell.nameLabel.text = profile.displayName;
     cell.roleLabel.text = profile.person.role;
+    cell.avatarImageView.image = profile.thumbnailImage;
     
     return cell;
 }

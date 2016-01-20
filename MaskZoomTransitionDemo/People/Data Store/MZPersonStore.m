@@ -33,7 +33,9 @@
                                                    department:p[@"department"]
                                                         email:p[@"email"]
                                                        mobile:p[@"mobile"]
-                                                        phone:p[@"phone"]]];
+                                                        phone:p[@"phone"]
+                                           thumbnailImageName:p[@"thumbnailImage"]
+                                             profileImageName:p[@"profileImage"]]];
     }
 
     return [people copy];

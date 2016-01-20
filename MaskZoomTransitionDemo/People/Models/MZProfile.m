@@ -35,4 +35,14 @@
     return [NSString stringWithFormat:@"%@%@", [self.person.firstName uppercaseInitial], [self.person.lastName uppercaseInitial]];
 }
 
+- (UIImage *)thumbnailImage
+{
+    return [UIImage imageNamed:self.person.thumbnailImageName];
+}
+
+- (UIImage *)profileImage
+{
+    return [UIImage imageNamed:self.person.profileImageName];
+}
+
 @end

@@ -29,7 +29,6 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vzZ-UP-owX" customClass="MZCircleImageView">
                                             <rect key="frame" x="16" y="8" width="48" height="48"/>
-                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="vzZ-UP-owX" secondAttribute="height" multiplier="1:1" id="B9f-zy-2iG"/>
                                                 <constraint firstAttribute="width" constant="48" id="FOj-aQ-NfM"/>
