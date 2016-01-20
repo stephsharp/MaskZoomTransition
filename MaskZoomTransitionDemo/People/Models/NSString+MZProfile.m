@@ -26,7 +26,8 @@
     UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0.0f);
 
     // Set background colour
-    [[UIColor blueColor] setFill];
+    UIColor *globalTint = [UIApplication sharedApplication].delegate.window.tintColor;
+    [globalTint setFill];
     UIRectFill(rect);
 
     // Set the font style and size

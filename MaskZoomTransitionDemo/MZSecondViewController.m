@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelRGB;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelHSL;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelHex;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
 - (IBAction)close:(UIButton *)button;
 
@@ -26,7 +27,15 @@
     [super viewDidLoad];
 
     self.circleView.backgroundColor = self.circleColor;
+    self.closeButton.tintColor = self.circleColor;
     [self setColorLabels];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    self.view.window.tintColor = self.circleColor;
 }
 
 - (void)setColorLabels
