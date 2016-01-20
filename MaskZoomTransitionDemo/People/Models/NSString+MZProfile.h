@@ -1,15 +1,16 @@
 //
-//  NSString+MZInitials.h
+//  NSString+MZProfile.h
 //  MaskZoomTransitionDemo
 //
 //  Created by Steph Sharp on 20/01/2016.
 //  Copyright © 2016 Stephanie Sharp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSString (MZInitials)
+@interface NSString (MZProfile)
 
 - (NSString *)uppercaseInitial;
+- (UIImage *)placeholderImageFromStringWithSize:(CGFloat)size;
 
 @end

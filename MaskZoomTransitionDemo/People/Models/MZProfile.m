@@ -7,7 +7,10 @@
 //
 
 #import "MZProfile.h"
-#import "NSString+MZInitials.h"
+#import "NSString+MZProfile.h"
+
+static NSUInteger const MZThumbnailImageSize = 144;
+static NSUInteger const MZProfileImageSize = 450;
 
 @implementation MZProfile
 
@@ -37,12 +40,14 @@
 
 - (UIImage *)thumbnailImage
 {
-    return [UIImage imageNamed:self.person.thumbnailImageName];
+    UIImage *image = [UIImage imageNamed:self.person.thumbnailImageName];
+    return image ?: [self.initials placeholderImageFromStringWithSize:MZThumbnailImageSize];
 }
 
 - (UIImage *)profileImage
 {
-    return [UIImage imageNamed:self.person.profileImageName];
+    UIImage *image = [UIImage imageNamed:self.person.profileImageName];
+    return image ?: [self.initials placeholderImageFromStringWithSize:MZProfileImageSize];
 }
 
 @end
