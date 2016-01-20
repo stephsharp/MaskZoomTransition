@@ -1,5 +1,5 @@
 //
-//  MZPeopleController.h
+//  MZPersonStore.h
 //  MaskZoomTransitionDemo
 //
 //  Created by Steph Sharp on 20/01/2016.
@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MZPerson.h"
 
-@interface MZPeopleController : NSObject
+@interface MZPersonStore : NSObject
 
-@property (nonatomic) NSArray *people;
+@property (nonatomic, readonly) NSArray *people; /* of MZPerson */
 
 @end

@@ -7,14 +7,6 @@
 //
 
 #import "MZPerson.h"
-#import "NSString+MZInitials.h"
-
-@interface MZPerson ()
-
-@property (nonatomic) NSString *firstInitial;
-@property (nonatomic) NSString *lastInitial;
-
-@end
 
 @implementation MZPerson
 
@@ -44,16 +36,6 @@
 - (instancetype)init
 {
     return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil];
-}
-
-- (NSString *)displayName
-{
-    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
-}
-
-- (NSString *)initials
-{
-    return [NSString stringWithFormat:@"%@%@", [self.firstName uppercaseInitial], [self.lastName uppercaseInitial]];
 }
 
 @end

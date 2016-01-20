@@ -7,13 +7,12 @@
 //
 
 #import "MZPeopleTableViewController.h"
-#import "MZPeopleController.h"
-#import "MZPerson.h"
+#import "MZProfilesController.h"
 #import "MZPersonCell.h"
 
 @interface MZPeopleTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) MZPeopleController *peopleController;
+@property (nonatomic) MZProfilesController *profilesController;
 
 @end
 
@@ -22,29 +21,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.peopleController = [MZPeopleController new];
+    self.profilesController = [MZProfilesController new];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    UITextView *textView;
+    textView.textContainerInset = UIEdgeInsetsMake(0, 50, 0, 0);
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.peopleController.people.count;
+    return self.profilesController.profiles.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MZPersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
-    MZPerson *person = self.peopleController.people[indexPath.row];
+    MZProfile *profile = self.profilesController.profiles[indexPath.row];
 
-    cell.nameLabel.text = person.displayName;
-    cell.roleLabel.text = person.role;
+    cell.nameLabel.text = profile.displayName;
+    cell.roleLabel.text = profile.person.role;
     
     return cell;
 }

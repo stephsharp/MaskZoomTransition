@@ -18,11 +18,8 @@
 @property (nonatomic) NSString *email;
 @property (nonatomic) NSString *mobile;
 @property (nonatomic) NSString *phone;
-@property (nonatomic) NSString *thumbnailImage;
-@property (nonatomic) NSString *profileImage;
-
-@property (nonatomic, readonly) NSString *displayName;
-@property (nonatomic, readonly) NSString *initials;
+@property (nonatomic) NSString *thumbnailImageName;
+@property (nonatomic) NSString *profileImageName;
 
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName
