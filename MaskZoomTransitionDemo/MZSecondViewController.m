@@ -7,6 +7,7 @@
 //
 
 #import "MZSecondViewController.h"
+#import "MZTheme.h"
 
 @interface MZSecondViewController ()
 
@@ -35,7 +36,7 @@
 {
     [super viewDidAppear:animated];
 
-    self.view.window.tintColor = self.circleColor;
+    [MZTheme setGlobalTintColor:self.circleColor];
 }
 
 - (void)setColorLabels

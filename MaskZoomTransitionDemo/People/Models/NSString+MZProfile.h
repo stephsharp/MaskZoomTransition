@@ -10,7 +10,7 @@
 
 @interface NSString (MZProfile)
 
-- (NSString *)uppercaseInitial;
-- (UIImage *)placeholderImageFromStringWithSize:(CGFloat)size;
+- (NSString *)mz_uppercaseInitial;
+- (UIImage *)mz_placeholderImageFromStringWithSize:(CGFloat)size;
 
 @end

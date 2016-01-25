@@ -35,19 +35,19 @@ static NSUInteger const MZProfileImageSize = 450;
 
 - (NSString *)initials
 {
-    return [NSString stringWithFormat:@"%@%@", [self.person.firstName uppercaseInitial], [self.person.lastName uppercaseInitial]];
+    return [NSString stringWithFormat:@"%@%@", [self.person.firstName mz_uppercaseInitial], [self.person.lastName mz_uppercaseInitial]];
 }
 
 - (UIImage *)thumbnailImage
 {
     UIImage *image = [UIImage imageNamed:self.person.thumbnailImageName];
-    return image ?: [self.initials placeholderImageFromStringWithSize:MZThumbnailImageSize];
+    return image ?: [self.initials mz_placeholderImageFromStringWithSize:MZThumbnailImageSize];
 }
 
 - (UIImage *)profileImage
 {
     UIImage *image = [UIImage imageNamed:self.person.profileImageName];
-    return image ?: [self.initials placeholderImageFromStringWithSize:MZProfileImageSize];
+    return image ?: [self.initials mz_placeholderImageFromStringWithSize:MZProfileImageSize];
 }
 
 @end

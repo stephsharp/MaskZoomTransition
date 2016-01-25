@@ -7,10 +7,11 @@
 //
 
 #import "NSString+MZProfile.h"
+#import "MZTheme.h"
 
 @implementation NSString (MZProfile)
 
-- (NSString *)uppercaseInitial
+- (NSString *)mz_uppercaseInitial
 {
     if (self.length > 0) {
         return [[self substringToIndex:1] uppercaseString];
@@ -19,15 +20,14 @@
     return @"";
 }
 
-- (UIImage *)placeholderImageFromStringWithSize:(CGFloat)size
+- (UIImage *)mz_placeholderImageFromStringWithSize:(CGFloat)size
 {
     CGRect rect = CGRectMake(0, 0, size, size);
 
     UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0.0f);
 
     // Set background colour
-    UIColor *globalTint = [UIApplication sharedApplication].delegate.window.tintColor;
-    [globalTint setFill];
+    [[MZTheme globalTintColor] setFill];
     UIRectFill(rect);
 
     // Set the font style and size
