@@ -40,13 +40,23 @@ static NSUInteger const MZProfileImageSize = 450;
 
 - (UIImage *)thumbnailImage
 {
-    UIImage *image = [UIImage imageNamed:self.person.thumbnailImageName];
+    UIImage *image;
+
+    if (self.person.thumbnailImageName.length > 0) {
+        image = [UIImage imageNamed:self.person.thumbnailImageName];
+    }
+
     return image ?: [self.initials mz_placeholderImageFromStringWithSize:MZThumbnailImageSize];
 }
 
 - (UIImage *)profileImage
 {
-    UIImage *image = [UIImage imageNamed:self.person.profileImageName];
+    UIImage *image;
+
+    if (self.person.profileImageName.length > 0) {
+        image = [UIImage imageNamed:self.person.profileImageName];
+    }
+
     return image ?: [self.initials mz_placeholderImageFromStringWithSize:MZProfileImageSize];
 }
 
