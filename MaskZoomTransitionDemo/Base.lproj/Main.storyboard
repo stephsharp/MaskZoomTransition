@@ -21,31 +21,8 @@
                         <sections>
                             <tableViewSection id="RRU-br-LOW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="VP5-Wd-06G" userLabel="Colours cell">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VP5-Wd-06G" id="grr-v1-fDa">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-hg-w8D">
-                                                    <rect key="frame" x="16" y="14" width="64.5" height="25"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="KxD-hg-w8D" firstAttribute="centerY" secondItem="grr-v1-fDa" secondAttribute="centerY" id="4VG-jt-ETq"/>
-                                                <constraint firstItem="KxD-hg-w8D" firstAttribute="leading" secondItem="grr-v1-fDa" secondAttribute="leadingMargin" constant="8" id="RbQ-Fy-TeW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="6Dh-ib-kU7" kind="show" id="cOj-Qc-yMD"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="UKY-kp-iII" userLabel="People cell">
-                                        <rect key="frame" x="0.0" y="52" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKY-kp-iII" id="IPa-L5-zgK">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
@@ -65,6 +42,29 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="9JC-bb-BDs" kind="show" id="aJn-1V-uLI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="VP5-Wd-06G" userLabel="Colours cell">
+                                        <rect key="frame" x="0.0" y="52" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VP5-Wd-06G" id="grr-v1-fDa">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxD-hg-w8D">
+                                                    <rect key="frame" x="16" y="14" width="64.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KxD-hg-w8D" firstAttribute="centerY" secondItem="grr-v1-fDa" secondAttribute="centerY" id="4VG-jt-ETq"/>
+                                                <constraint firstItem="KxD-hg-w8D" firstAttribute="leading" secondItem="grr-v1-fDa" secondAttribute="leadingMargin" constant="8" id="RbQ-Fy-TeW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="6Dh-ib-kU7" kind="show" id="cOj-Qc-yMD"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -107,7 +107,7 @@
                 <viewControllerPlaceholder storyboardName="Colours" id="6Dh-ib-kU7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tT6-Ei-lKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60.5" y="275"/>
+            <point key="canvasLocation" x="66.5" y="434"/>
         </scene>
         <!--People-->
         <scene sceneID="aO6-nO-rFO">
@@ -115,7 +115,7 @@
                 <viewControllerPlaceholder storyboardName="People" id="9JC-bb-BDs" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vy6-K4-Oz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="432"/>
+            <point key="canvasLocation" x="64" y="273"/>
         </scene>
     </scenes>
 </document>

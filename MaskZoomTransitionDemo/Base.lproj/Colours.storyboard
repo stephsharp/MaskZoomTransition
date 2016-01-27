@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Choose a color-->
+        <!--Choose a colour-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MZFirstViewController" sceneMemberID="viewController">
@@ -263,7 +263,7 @@
                             <constraint firstItem="jR1-cD-f7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sTa-Cf-zY5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose a color" id="ULK-Y8-a1l">
+                    <navigationItem key="navigationItem" title="Choose a colour" id="ULK-Y8-a1l">
                         <barButtonItem key="leftBarButtonItem" image="left-arrow" id="5Wg-h9-jGM">
                             <connections>
                                 <action selector="pop" destination="BYZ-38-t0r" id="Hat-fb-C2O"/>
