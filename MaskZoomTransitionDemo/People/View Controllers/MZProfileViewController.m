@@ -9,6 +9,7 @@
 #import "MZProfileViewController.h"
 #import "UIView+MZEmbed.h"
 #import "UIView+MZNavigationBar.h"
+#import "MZProfileCell.h"
 
 static NSString * const kEmailAddressTitle = @"email";
 static NSString * const kMobilePhoneTitle = @"mobile";
@@ -173,17 +174,13 @@ static CGFloat MZProfileImageMaxHeight;
 	return (NSInteger)self.theTitles.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *CellIdentifier = @"ProfileCell";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	MZProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileCell"];
 
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NSUInteger index = (NSUInteger)indexPath.row;
-
-	UILabel *lblName = (UILabel *)[cell viewWithTag:100];
-	[lblName setText:[NSString stringWithFormat:@"%@", [self.theTitles objectAtIndex:index]]];
-
-	UILabel *lblRole = (UILabel *)[cell viewWithTag:200];
-	[lblRole setText:[NSString stringWithFormat:@"%@", [self.theContactInformation objectAtIndex:index]]];
+    cell.captionLabel.text = [self.theTitles objectAtIndex:index];
+    cell.contentLabel.text = [self.theContactInformation objectAtIndex:index];
 
 	return cell;
 }
