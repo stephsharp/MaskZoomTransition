@@ -58,10 +58,10 @@ static CGFloat MZProfileImageMaxHeight;
 
     MZProfileImageMaxHeight = CGRectGetWidth([UIScreen mainScreen].bounds) - 40.0f;
 
-    // Reduce size of profile image slightly on small screens
-//    if (IS_IPHONE_4_OR_LESS) {
-//        self.profileImageViewHeightConstraint.constant -= 35.0f;
-//    }
+    // Decrease size of profile image on small screens (e.g. iPhone 4S)
+    if (CGRectGetHeight([UIScreen mainScreen].bounds) < 568) {
+        self.profileImageViewHeightConstraint.constant -= 35.0f;
+    }
 
     [self setUpProfile];
     [self addTableViewPanGestureRecognizerToView];
