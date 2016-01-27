@@ -8,6 +8,7 @@
 
 #import "MZProfileViewController.h"
 #import "UIView+MZEmbed.h"
+#import "UIView+MZNavigationBar.h"
 
 static NSString * const kEmailAddressTitle = @"email";
 static NSString * const kMobilePhoneTitle = @"mobile";
@@ -68,7 +69,7 @@ static CGFloat MZProfileImageMaxHeight;
     [self setupProfileButtons];
 
     // When view is first loaded, hide navigation bar hairline immediately
-//    [self.navigationController.navigationBar hideBottomHairlineAnimated:NO];
+    [self.navigationController.navigationBar mz_hideBottomHairlineAnimated:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -76,9 +77,9 @@ static CGFloat MZProfileImageMaxHeight;
     [super viewWillAppear:animated];
 
     // When returning to this view (e.g. unwind), animate out the navigation bar hairline
-//    if ([self.navigationController.navigationBar hairlineIsVisible]) {
-//        [self.navigationController.navigationBar hideBottomHairlineAnimated:YES];
-//    }
+    if ([self.navigationController.navigationBar mz_hairlineIsVisible]) {
+        [self.navigationController.navigationBar mz_hideBottomHairlineAnimated:YES];
+    }
 }
 
 - (void)viewDidLayoutSubviews

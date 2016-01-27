@@ -39,6 +39,7 @@
 		82B6ADEE1C583ED800734CCC /* MZTopImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADEB1C583ED800734CCC /* MZTopImageButton.m */; };
 		82B6ADF51C583F9400734CCC /* UIView+MZEmbed.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADF21C583F9400734CCC /* UIView+MZEmbed.m */; };
 		82B6ADF61C583F9400734CCC /* UIViewController+MZContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADF41C583F9400734CCC /* UIViewController+MZContentViewController.m */; };
+		82B6ADFA1C58498300734CCC /* UIView+MZNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADF91C58498300734CCC /* UIView+MZNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,8 @@
 		82B6ADF21C583F9400734CCC /* UIView+MZEmbed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MZEmbed.m"; sourceTree = "<group>"; };
 		82B6ADF31C583F9400734CCC /* UIViewController+MZContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MZContentViewController.h"; sourceTree = "<group>"; };
 		82B6ADF41C583F9400734CCC /* UIViewController+MZContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MZContentViewController.m"; sourceTree = "<group>"; };
+		82B6ADF81C58498300734CCC /* UIView+MZNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MZNavigationBar.h"; sourceTree = "<group>"; };
+		82B6ADF91C58498300734CCC /* UIView+MZNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MZNavigationBar.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +278,7 @@
 		82B6ADEF1C583F9400734CCC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				82B6ADF71C58498300734CCC /* Navigation */,
 				82B6ADF01C583F9400734CCC /* View Containment */,
 			);
 			path = Categories;
@@ -289,6 +293,15 @@
 				82B6ADF41C583F9400734CCC /* UIViewController+MZContentViewController.m */,
 			);
 			path = "View Containment";
+			sourceTree = "<group>";
+		};
+		82B6ADF71C58498300734CCC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				82B6ADF81C58498300734CCC /* UIView+MZNavigationBar.h */,
+				82B6ADF91C58498300734CCC /* UIView+MZNavigationBar.m */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +392,7 @@
 				82B6AD961C4F591000734CCC /* MZCircleImageView.m in Sources */,
 				82B6ADBE1C55DC3200734CCC /* MZTheme.m in Sources */,
 				82B6ADF51C583F9400734CCC /* UIView+MZEmbed.m in Sources */,
+				82B6ADFA1C58498300734CCC /* UIView+MZNavigationBar.m in Sources */,
 				82B6ACB21C235B8C00734CCC /* MZCircleButton.m in Sources */,
 				8284FB501C2123DA00CD7642 /* UIViewController+MZContentViewController.m in Sources */,
 				82B6ADED1C583ED800734CCC /* MZLineView.m in Sources */,
