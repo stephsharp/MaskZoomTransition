@@ -33,6 +33,12 @@
 		82B6ADA31C50290300734CCC /* MZPersonStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADA11C50290300734CCC /* MZPersonStore.m */; };
 		82B6ADBE1C55DC3200734CCC /* MZTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADBB1C55DC3200734CCC /* MZTheme.m */; };
 		82B6ADC21C55DC7400734CCC /* UIColor+MZTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADC11C55DC7400734CCC /* UIColor+MZTheme.m */; };
+		82B6ADE51C583ECB00734CCC /* MZProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADE41C583ECB00734CCC /* MZProfileViewController.m */; };
+		82B6ADEC1C583ED800734CCC /* MZProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADE71C583ED800734CCC /* MZProfileCell.m */; };
+		82B6ADED1C583ED800734CCC /* MZLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADE91C583ED800734CCC /* MZLineView.m */; };
+		82B6ADEE1C583ED800734CCC /* MZTopImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADEB1C583ED800734CCC /* MZTopImageButton.m */; };
+		82B6ADF51C583F9400734CCC /* UIView+MZEmbed.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADF21C583F9400734CCC /* UIView+MZEmbed.m */; };
+		82B6ADF61C583F9400734CCC /* UIViewController+MZContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ADF41C583F9400734CCC /* UIViewController+MZContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +89,18 @@
 		82B6ADBB1C55DC3200734CCC /* MZTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTheme.m; sourceTree = "<group>"; };
 		82B6ADC01C55DC7400734CCC /* UIColor+MZTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MZTheme.h"; sourceTree = "<group>"; };
 		82B6ADC11C55DC7400734CCC /* UIColor+MZTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MZTheme.m"; sourceTree = "<group>"; };
+		82B6ADE31C583ECB00734CCC /* MZProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZProfileViewController.h; sourceTree = "<group>"; };
+		82B6ADE41C583ECB00734CCC /* MZProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZProfileViewController.m; sourceTree = "<group>"; };
+		82B6ADE61C583ED800734CCC /* MZProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZProfileCell.h; sourceTree = "<group>"; };
+		82B6ADE71C583ED800734CCC /* MZProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZProfileCell.m; sourceTree = "<group>"; };
+		82B6ADE81C583ED800734CCC /* MZLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLineView.h; sourceTree = "<group>"; };
+		82B6ADE91C583ED800734CCC /* MZLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLineView.m; sourceTree = "<group>"; };
+		82B6ADEA1C583ED800734CCC /* MZTopImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTopImageButton.h; sourceTree = "<group>"; };
+		82B6ADEB1C583ED800734CCC /* MZTopImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTopImageButton.m; sourceTree = "<group>"; };
+		82B6ADF11C583F9400734CCC /* UIView+MZEmbed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MZEmbed.h"; sourceTree = "<group>"; };
+		82B6ADF21C583F9400734CCC /* UIView+MZEmbed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MZEmbed.m"; sourceTree = "<group>"; };
+		82B6ADF31C583F9400734CCC /* UIViewController+MZContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MZContentViewController.h"; sourceTree = "<group>"; };
+		82B6ADF41C583F9400734CCC /* UIViewController+MZContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MZContentViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +145,7 @@
 				82B6ACB01C235B8C00734CCC /* MZCircleButton.h */,
 				82B6ACB11C235B8C00734CCC /* MZCircleButton.m */,
 				82B6ADB91C55DC3200734CCC /* Theme */,
+				82B6ADEF1C583F9400734CCC /* Categories */,
 				82B6AD631C4F32E900734CCC /* People */,
 				82B6AD621C4F306D00734CCC /* Storyboards */,
 				8284FB361C21203500CD7642 /* Assets.xcassets */,
@@ -209,6 +228,8 @@
 			children = (
 				82B6AD8A1C4F591000734CCC /* MZPeopleTableViewController.h */,
 				82B6AD8B1C4F591000734CCC /* MZPeopleTableViewController.m */,
+				82B6ADE31C583ECB00734CCC /* MZProfileViewController.h */,
+				82B6ADE41C583ECB00734CCC /* MZProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -218,8 +239,14 @@
 			children = (
 				82B6AD8D1C4F591000734CCC /* MZCircleImageView.h */,
 				82B6AD8E1C4F591000734CCC /* MZCircleImageView.m */,
+				82B6ADE81C583ED800734CCC /* MZLineView.h */,
+				82B6ADE91C583ED800734CCC /* MZLineView.m */,
 				82B6AD8F1C4F591000734CCC /* MZPersonCell.h */,
 				82B6AD901C4F591000734CCC /* MZPersonCell.m */,
+				82B6ADE61C583ED800734CCC /* MZProfileCell.h */,
+				82B6ADE71C583ED800734CCC /* MZProfileCell.m */,
+				82B6ADEA1C583ED800734CCC /* MZTopImageButton.h */,
+				82B6ADEB1C583ED800734CCC /* MZTopImageButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +270,25 @@
 				82B6ADC11C55DC7400734CCC /* UIColor+MZTheme.m */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		82B6ADEF1C583F9400734CCC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				82B6ADF01C583F9400734CCC /* View Containment */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		82B6ADF01C583F9400734CCC /* View Containment */ = {
+			isa = PBXGroup;
+			children = (
+				82B6ADF11C583F9400734CCC /* UIView+MZEmbed.h */,
+				82B6ADF21C583F9400734CCC /* UIView+MZEmbed.m */,
+				82B6ADF31C583F9400734CCC /* UIViewController+MZContentViewController.h */,
+				82B6ADF41C583F9400734CCC /* UIViewController+MZContentViewController.m */,
+			);
+			path = "View Containment";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,24 +367,30 @@
 			files = (
 				82B6ADC21C55DC7400734CCC /* UIColor+MZTheme.m in Sources */,
 				8284FB591C21296100CD7642 /* MZSecondViewController.m in Sources */,
+				82B6ADEC1C583ED800734CCC /* MZProfileCell.m in Sources */,
 				8284FB481C21211500CD7642 /* MZGradientCircleLayer.m in Sources */,
 				8284FB2F1C21203500CD7642 /* AppDelegate.m in Sources */,
 				8284FB4A1C21211500CD7642 /* MZMaskZoomTransitioningDelegate.m in Sources */,
 				8284FB561C21295600CD7642 /* MZFirstViewController.m in Sources */,
 				82B6AD951C4F591000734CCC /* MZPeopleTableViewController.m in Sources */,
 				8284FB4D1C2122BB00CD7642 /* MZCircleView.m in Sources */,
+				82B6ADF61C583F9400734CCC /* UIViewController+MZContentViewController.m in Sources */,
 				82B6AD971C4F591000734CCC /* MZPersonCell.m in Sources */,
 				82B6AD961C4F591000734CCC /* MZCircleImageView.m in Sources */,
 				82B6ADBE1C55DC3200734CCC /* MZTheme.m in Sources */,
+				82B6ADF51C583F9400734CCC /* UIView+MZEmbed.m in Sources */,
 				82B6ACB21C235B8C00734CCC /* MZCircleButton.m in Sources */,
 				8284FB501C2123DA00CD7642 /* UIViewController+MZContentViewController.m in Sources */,
+				82B6ADED1C583ED800734CCC /* MZLineView.m in Sources */,
 				82B6AD9D1C5028AD00734CCC /* MZProfilesController.m in Sources */,
+				82B6ADEE1C583ED800734CCC /* MZTopImageButton.m in Sources */,
 				8284FB491C21211500CD7642 /* MZMaskZoomTransition.m in Sources */,
 				82B6ADA31C50290300734CCC /* MZPersonStore.m in Sources */,
 				8284FB2C1C21203500CD7642 /* main.m in Sources */,
 				82B6AD931C4F591000734CCC /* MZPerson.m in Sources */,
 				82B6AD941C4F591000734CCC /* NSString+MZProfile.m in Sources */,
 				82B6AD9A1C4F626E00734CCC /* MZProfile.m in Sources */,
+				82B6ADE51C583ECB00734CCC /* MZProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

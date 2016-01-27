@@ -12,13 +12,13 @@
 		<key>location</key>
 		<string>Melbourne</string>
 		<key>department</key>
-		<string>Digital</string>
+		<string></string>
 		<key>email</key>
 		<string>ssharp@company.com</string>
 		<key>mobile</key>
 		<string>0411 222 333</string>
 		<key>phone</key>
-		<string>03 9999 8888</string>
+		<string></string>
 		<key>thumbnailImage</key>
 		<string>steph-profile-square</string>
 		<key>profileImage</key>

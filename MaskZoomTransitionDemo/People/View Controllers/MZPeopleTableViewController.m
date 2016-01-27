@@ -9,10 +9,13 @@
 #import "MZPeopleTableViewController.h"
 #import "MZProfilesController.h"
 #import "MZPersonCell.h"
+#import "UIViewController+MZContentViewController.h"
+#import "MZProfileViewController.h"
 
-@interface MZPeopleTableViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MZPeopleTableViewController () <UITableViewDataSource, UITableViewDelegate, MZProfileViewControllerDelegate>
 
 @property (nonatomic) MZProfilesController *profilesController;
+@property (nonatomic) MZMaskZoomTransitioningDelegate * transitioningDelegate;
 
 @end
 
@@ -21,7 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     self.profilesController = [MZProfilesController new];
+    self.transitioningDelegate = [MZMaskZoomTransitioningDelegate new];
 }
 
 #pragma mark - UITableViewDataSource
@@ -58,6 +63,43 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *contentViewController = segue.destinationViewController.mz_contentViewController;
+
+    if ([[segue identifier] isEqualToString:@"ProfileSegue"]) {
+        MZProfileViewController *profileVC = (MZProfileViewController *)contentViewController;
+        profileVC.delegate = self;
+
+        if ([sender isKindOfClass:[MZPersonCell class]]) {
+            MZPersonCell *cell = (MZPersonCell *)sender;
+            self.transitioningDelegate.smallView = cell.avatarImageView;
+
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            profileVC.profile = self.profilesController.profiles[indexPath.row];
+        }
+
+        segue.destinationViewController.transitioningDelegate = self.transitioningDelegate;
+        segue.destinationViewController.modalPresentationStyle = UIModalPresentationCustom;
+    }
+}
+
+#pragma mark - MZProfileViewControllerDelegate
+
+- (void)MZProfileViewControllerShouldDismiss:(MZProfileViewController *)profileViewController
+{
+//    if (/* person was deleted */) {
+//        self.transitioningDelegate.dismissToZeroSize = YES;
+//    }
+
+    [self dismissViewControllerAnimated:YES completion:^{
+        // Set dismissToZeroSize back to NO after transition completes.
+        self.transitioningDelegate.dismissToZeroSize = NO;
+    }];
 }
 
 @end
