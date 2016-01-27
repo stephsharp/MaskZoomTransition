@@ -30,15 +30,15 @@
 
 @implementation MZMaskZoomTransition
 
-static NSTimeInterval const ODDefaultDuration = 0.25;
-static CGFloat const ODGradientWidth = 80.0f;
-static CGFloat const ODDefaultFadeInOffset = 8.0f;
+static NSTimeInterval const MZDefaultDuration = 0.25;
+static CGFloat const MZGradientWidth = 80.0f;
+static CGFloat const MZDefaultFadeInOffset = 8.0f;
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _duration = ODDefaultDuration;
+        _duration = MZDefaultDuration;
         _presenting = YES;
         _dismissToZeroSize = NO;
     }
@@ -108,7 +108,7 @@ static CGFloat const ODDefaultFadeInOffset = 8.0f;
     MZGradientCircleLayer *maskLayer = [MZGradientCircleLayer layer];
     maskLayer.position = [self centerOfRect:self.largeCircleFrame];
     maskLayer.frame = self.largeCircleFrame;
-    maskLayer.gradientWidth = ODGradientWidth;
+    maskLayer.gradientWidth = MZGradientWidth;
 
     CGFloat initialScale = self.presenting ? self.smallScale : 1.0f;
     CGFloat finalScale = self.presenting ? 1.0f : self.smallScale;
@@ -176,7 +176,7 @@ static CGFloat const ODDefaultFadeInOffset = 8.0f;
 
 - (void)fadeViews
 {
-    CGFloat offset = ODDefaultFadeInOffset * [UIScreen mainScreen].scale;
+    CGFloat offset = MZDefaultFadeInOffset * [UIScreen mainScreen].scale;
 
     for (UIView *view in self.viewsToFadeIn) {
         NSTimeInterval transitionDuration = [self transitionDuration:self.transitionContext];
@@ -242,7 +242,7 @@ static CGFloat const ODDefaultFadeInOffset = 8.0f;
     CGPoint extremePoint = [self farthestCornerOfRect:self.maskView.bounds fromPoint:smallViewCenter];
 
     CGFloat radiusToEdgeOfView = [self distanceBetweenPoint1:smallViewCenter point2:extremePoint];
-    CGFloat largeCircleRadius = radiusToEdgeOfView + ODGradientWidth;
+    CGFloat largeCircleRadius = radiusToEdgeOfView + MZGradientWidth;
 
     CGRect zeroRectCenteredOnSmallView = CGRectMake(smallViewCenter.x, smallViewCenter.y, 0.0f, 0.0f);
     CGRect largeCircleFrame = CGRectInset(zeroRectCenteredOnSmallView, -largeCircleRadius, -largeCircleRadius);
