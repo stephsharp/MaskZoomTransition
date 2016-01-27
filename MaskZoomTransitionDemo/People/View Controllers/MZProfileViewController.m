@@ -9,12 +9,6 @@
 #import "MZProfileViewController.h"
 #import "UIView+MZEmbed.h"
 #import "UIView+MZNavigationBar.h"
-#import "MZProfileCell.h"
-
-static NSString * const kEmailAddressTitle = @"email";
-static NSString * const kMobilePhoneTitle = @"mobile";
-static NSString * const kWorkPhoneTitle = @"work";
-static NSString * const kServiceLineTitle = @"department";
 
 static CGFloat const MZProfileImageMinHeight = 80.0f;
 static CGFloat MZProfileImageMaxHeight;
@@ -24,12 +18,12 @@ static CGFloat MZProfileImageMaxHeight;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *profileImageViewHeightConstraint;
-@property (weak, nonatomic) IBOutlet UILabel *theProfileNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *theProfileRoleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *theLocationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *profileButtonsContainerView;
-@property (weak, nonatomic) IBOutlet UITableView *theContactDetailsTableView;
+@property (weak, nonatomic) IBOutlet UITableView *contactDetailsTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *profileButtonsView;
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
@@ -44,9 +38,6 @@ static CGFloat MZProfileImageMaxHeight;
 
 @property (nonatomic) CGFloat profileImageOriginalHeight;
 @property (nonatomic, readonly) BOOL isMe;
-
-@property (nonatomic) NSMutableArray *theTitles;
-@property (nonatomic) NSMutableArray *theContactInformation;
 
 @end
 
@@ -91,41 +82,17 @@ static CGFloat MZProfileImageMaxHeight;
 
 - (void)setUpProfile
 {
-    self.theProfileNameLabel.text = self.profile.displayName;
-    self.theProfileRoleLabel.text = self.profile.person.role;
-    self.theLocationLabel.text = self.profile.person.location;
+    self.nameLabel.text = self.profile.displayName;
+    self.roleLabel.text = self.profile.person.role;
+    self.locationLabel.text = self.profile.person.location;
     self.profileImageView.image = self.profile.profileImage;
 
-	if (!self.theTitles)
-		self.theTitles = [[NSMutableArray alloc] initWithCapacity:5];
-
-	if (!self.theContactInformation)
-		self.theContactInformation = [[NSMutableArray alloc] initWithCapacity:5];
-
-	if (self.profile.person.mobile.length > 0) {
-		[self.theTitles addObject:kMobilePhoneTitle];
-		[self.theContactInformation addObject:self.profile.person.mobile];
-	}
-
-	if (self.profile.person.phone.length > 0) {
-		[self.theTitles addObject:kWorkPhoneTitle];
-		[self.theContactInformation addObject:self.profile.person.phone];
-	}
-
-    if (self.profile.person.email.length > 0) {
-        [self.theTitles addObject:kEmailAddressTitle];
-        [self.theContactInformation addObject:self.profile.person.email];
-    }
-
-    if (self.profile.person.department.length > 0) {
-        [self.theTitles addObject:kServiceLineTitle];
-        [self.theContactInformation addObject:self.profile.person.department];
-    }
+    self.contactDetailsTableView.dataSource = self.profile;
 }
 
 - (void)addTableViewPanGestureRecognizerToView
 {
-    for (UIGestureRecognizer *recognizer in self.theContactDetailsTableView.gestureRecognizers) {
+    for (UIGestureRecognizer *recognizer in self.contactDetailsTableView.gestureRecognizers) {
         if ([recognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
             [self.view addGestureRecognizer:recognizer];
         }
@@ -134,9 +101,9 @@ static CGFloat MZProfileImageMaxHeight;
 
 - (void)setupTableView
 {
-    if (self.theContactDetailsTableView.contentInset.top == 0) {
+    if (self.contactDetailsTableView.contentInset.top == 0) {
         CGFloat topInset = CGRectGetHeight(self.headerView.frame) + 20;
-        self.theContactDetailsTableView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
+        self.contactDetailsTableView.contentInset = UIEdgeInsetsMake(topInset, 0, 0, 0);
     }
 }
 
@@ -162,29 +129,6 @@ static CGFloat MZProfileImageMaxHeight;
     return NO;
 }
 
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-	return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	return (NSInteger)self.theTitles.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	MZProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileCell"];
-
-    NSUInteger index = (NSUInteger)indexPath.row;
-    cell.captionLabel.text = [self.theTitles objectAtIndex:index];
-    cell.contentLabel.text = [self.theContactInformation objectAtIndex:index];
-
-	return cell;
-}
-
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -207,11 +151,11 @@ static CGFloat MZProfileImageMaxHeight;
 
 - (NSArray *)viewsToFadeIn
 {
-    return @[self.theProfileNameLabel,
-             self.theProfileRoleLabel,
-             self.theLocationLabel,
+    return @[self.nameLabel,
+             self.roleLabel,
+             self.locationLabel,
              self.profileButtonsContainerView,
-             self.theContactDetailsTableView];
+             self.contactDetailsTableView];
 }
 
 - (UIView *)largeView

@@ -8,9 +8,21 @@
 
 #import "MZProfile.h"
 #import "NSString+MZProfile.h"
+#import "MZProfileCell.h"
+
+static NSString *const MZMobileTitle = @"mobile";
+static NSString *const MZPhoneTitle = @"work";
+static NSString *const MZEmailTitle = @"email";
+static NSString *const MZDepartmentTitle = @"department";
 
 static NSUInteger const MZThumbnailImageSize = 144;
 static NSUInteger const MZProfileImageSize = 450;
+
+@interface MZProfile ()
+
+@property (nonatomic) NSArray *tableData;
+
+@end
 
 @implementation MZProfile
 
@@ -58,6 +70,55 @@ static NSUInteger const MZProfileImageSize = 450;
     }
 
     return image ?: [self.initials mz_placeholderImageFromStringWithSize:MZProfileImageSize];
+}
+
+- (NSArray *)tableData
+{
+    if (!_tableData) {
+        NSMutableArray *mutableTableData = [NSMutableArray new];
+
+        if (self.person.mobile.length > 0) {
+            [mutableTableData addObject:@{ @"title" : MZMobileTitle, @"content" : self.person.mobile }];
+        }
+
+        if (self.person.phone.length > 0) {
+            [mutableTableData addObject:@{ @"title" : MZPhoneTitle, @"content" : self.person.phone }];
+        }
+
+        if (self.person.email.length > 0) {
+            [mutableTableData addObject:@{ @"title" : MZEmailTitle, @"content" : self.person.email }];
+        }
+
+        if (self.person.department.length > 0) {
+            [mutableTableData addObject:@{ @"title" : MZDepartmentTitle, @"content" : self.person.department }];
+        }
+        
+        _tableData = [mutableTableData copy];
+    }
+    return _tableData;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return (NSInteger)self.tableData.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MZProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileCell"];
+
+    NSUInteger index = (NSUInteger)indexPath.row;
+    cell.titleLabel.text = self.tableData[index][@"title"];
+    cell.contentLabel.text = self.tableData[index][@"content"];
+
+    return cell;
 }
 
 @end

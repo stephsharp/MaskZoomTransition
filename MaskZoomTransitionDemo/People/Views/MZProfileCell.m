@@ -14,7 +14,7 @@
 
 - (void)tintColorDidChange
 {
-    self.captionLabel.textColor = self.tintColor;
+    self.titleLabel.textColor = self.tintColor;
     [super tintColorDidChange];
 }
 

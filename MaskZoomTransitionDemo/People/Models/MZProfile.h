@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MZPerson.h"
 
-@interface MZProfile : NSObject
+@interface MZProfile : NSObject <UITableViewDataSource>
 
 @property (nonatomic, readonly) MZPerson *person;
 

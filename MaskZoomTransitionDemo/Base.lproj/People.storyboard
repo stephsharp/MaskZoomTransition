@@ -114,7 +114,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfi-6q-kOE" userLabel="Caption label">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfi-6q-kOE" userLabel="Title label">
                                                     <rect key="frame" x="10" y="10" width="146" height="14"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
@@ -137,13 +137,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="captionLabel" destination="Qfi-6q-kOE" id="9Sq-pD-oxs"/>
                                             <outlet property="contentLabel" destination="hwo-T7-sOd" id="wci-hm-Q3j"/>
+                                            <outlet property="titleLabel" destination="Qfi-6q-kOE" id="AcZ-Ey-TMG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="i6f-84-YHw" id="k0x-dc-wr3"/>
                                     <outlet property="delegate" destination="i6f-84-YHw" id="MS0-Ep-SUF"/>
                                 </connections>
                             </tableView>
@@ -226,22 +225,22 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressBookButton" destination="eFB-HD-u31" id="irT-MG-wFQ"/>
+                        <outlet property="contactDetailsTableView" destination="E8Z-EZ-ebj" id="rCI-2b-4l9"/>
                         <outlet property="favouriteButton" destination="2OH-S0-i4h" id="nC7-GL-jqj"/>
                         <outlet property="headerView" destination="zvE-bU-AKD" id="T8n-EI-Ari"/>
+                        <outlet property="locationLabel" destination="a80-0F-SOl" id="EVI-yZ-1et"/>
                         <outlet property="messageButton" destination="Sfo-oQ-dsN" id="9Ou-Xw-90O"/>
                         <outlet property="messageSpacerView" destination="ZYl-Rd-qLK" id="bzE-1A-yVO"/>
                         <outlet property="myAddressBookButton" destination="9Ph-j3-HGA" id="R3J-QE-ap1"/>
                         <outlet property="myProfileButtonsView" destination="nAX-Os-f1l" id="Gzd-2U-sb1"/>
+                        <outlet property="nameLabel" destination="bay-Za-hz0" id="cOg-Mn-VOf"/>
                         <outlet property="phoneButton" destination="VPP-qF-TCT" id="pWM-16-BUG"/>
                         <outlet property="phoneSpacerView" destination="bJ5-Jo-9ms" id="Lyo-Aa-Anf"/>
                         <outlet property="profileButtonsContainerView" destination="m1s-yb-cwm" id="gDT-pz-vz2"/>
                         <outlet property="profileButtonsView" destination="gDX-CX-d0f" id="dOW-hS-kOv"/>
                         <outlet property="profileImageView" destination="yyF-oh-4dn" id="U8b-h3-gYr"/>
                         <outlet property="profileImageViewHeightConstraint" destination="0Rt-Ud-eX8" id="AyB-jl-lcW"/>
-                        <outlet property="theContactDetailsTableView" destination="E8Z-EZ-ebj" id="qvw-pA-4NW"/>
-                        <outlet property="theLocationLabel" destination="a80-0F-SOl" id="1a8-6v-Egd"/>
-                        <outlet property="theProfileNameLabel" destination="bay-Za-hz0" id="6OL-1E-3Mf"/>
-                        <outlet property="theProfileRoleLabel" destination="wUR-Pv-p2p" id="g5h-mi-RNw"/>
+                        <outlet property="roleLabel" destination="wUR-Pv-p2p" id="5BE-Cj-rdf"/>
                     </connections>
                 </viewController>
                 <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" id="gDX-CX-d0f">

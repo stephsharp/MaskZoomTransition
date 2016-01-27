@@ -18,7 +18,7 @@
 
 @end
 
-@interface MZProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MZMaskZoomTransitionPresentedViewController>
+@interface MZProfileViewController : UIViewController <MZMaskZoomTransitionPresentedViewController>
 
 @property (nonatomic, weak) id<MZProfileViewControllerDelegate> delegate;
 
