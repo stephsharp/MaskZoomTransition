@@ -8,6 +8,7 @@
 
 #import "MZSecondViewController.h"
 #import "MZTheme.h"
+#import "UIView+MZNavigationBar.h"
 
 @interface MZSecondViewController ()
 
@@ -15,9 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelRGB;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelHSL;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelHex;
-@property (weak, nonatomic) IBOutlet UIButton *closeButton;
-
-- (IBAction)close:(UIButton *)button;
 
 @end
 
@@ -28,8 +26,10 @@
     [super viewDidLoad];
 
     self.circleView.backgroundColor = self.circleColor;
-    self.closeButton.tintColor = self.circleColor;
     [self setColorLabels];
+
+    self.navigationItem.leftBarButtonItem.tintColor = self.circleColor;
+    [self.navigationController.navigationBar mz_hideBottomHairlineAnimated:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -56,7 +56,7 @@
 
 #pragma mark - Actions
 
-- (void)close:(UIButton *)button
+- (IBAction)dismiss
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }

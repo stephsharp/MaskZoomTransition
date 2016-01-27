@@ -88,6 +88,13 @@
     }
 }
 
+#pragma mark - Actions
+
+- (IBAction)pop
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - MZProfileViewControllerDelegate
 
 - (void)MZProfileViewControllerShouldDismiss:(MZProfileViewController *)profileViewController

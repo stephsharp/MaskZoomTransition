@@ -3,11 +3,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Choose a color-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MZFirstViewController" sceneMemberID="viewController">
@@ -20,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jR1-cD-f7T">
-                                <rect key="frame" x="120" y="120" width="360" height="360"/>
+                                <rect key="frame" x="50" y="50" width="500" height="500"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kIj-kG-0kv">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLl-GY-aR1" customClass="MZCircleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gLl-GY-aR1" secondAttribute="height" multiplier="1:1" id="WM0-Xf-zK0"/>
@@ -39,7 +38,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRD-n3-6l8" customClass="MZCircleButton">
-                                                <rect key="frame" x="95" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="130" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="VRD-n3-6l8" secondAttribute="height" multiplier="1:1" id="VSn-ac-Lm0"/>
@@ -52,7 +51,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceu-Sd-rmL" customClass="MZCircleButton">
-                                                <rect key="frame" x="190" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="260" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ceu-Sd-rmL" secondAttribute="height" multiplier="1:1" id="usR-zv-aUM"/>
@@ -65,7 +64,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P0-IJ-9tA" customClass="MZCircleButton">
-                                                <rect key="frame" x="285" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="390" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4P0-IJ-9tA" secondAttribute="height" multiplier="1:1" id="Ly3-SU-jET"/>
@@ -80,10 +79,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nIv-6d-oQK">
-                                        <rect key="frame" x="0.0" y="95" width="360" height="75"/>
+                                        <rect key="frame" x="0.0" y="130" width="500" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzM-HZ-TAY" customClass="MZCircleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="KzM-HZ-TAY" secondAttribute="height" multiplier="1:1" id="fHa-xm-L7e"/>
@@ -96,7 +95,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xau-Ph-Uzm" customClass="MZCircleButton">
-                                                <rect key="frame" x="95" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="130" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Xau-Ph-Uzm" secondAttribute="height" multiplier="1:1" id="pn1-ad-Moz"/>
@@ -109,7 +108,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z2-KQ-yIe" customClass="MZCircleButton">
-                                                <rect key="frame" x="190" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="260" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8Z2-KQ-yIe" secondAttribute="height" multiplier="1:1" id="v2X-A1-jQ5"/>
@@ -122,7 +121,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-Uv-53A" customClass="MZCircleButton">
-                                                <rect key="frame" x="285" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="390" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mAV-Uv-53A" secondAttribute="height" multiplier="1:1" id="KxA-qz-R8s"/>
@@ -137,10 +136,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="anW-IW-zTU">
-                                        <rect key="frame" x="0.0" y="190" width="360" height="75"/>
+                                        <rect key="frame" x="0.0" y="260" width="500" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK7-7f-nHq" customClass="MZCircleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MK7-7f-nHq" secondAttribute="height" multiplier="1:1" id="sau-ug-gmh"/>
@@ -153,7 +152,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-qB-rdD" customClass="MZCircleButton">
-                                                <rect key="frame" x="95" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="130" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8cg-qB-rdD" secondAttribute="height" multiplier="1:1" id="Mbp-I1-yB1"/>
@@ -166,7 +165,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaI-XJ-n8G" customClass="MZCircleButton">
-                                                <rect key="frame" x="190" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="260" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="TaI-XJ-n8G" secondAttribute="height" multiplier="1:1" id="zKK-m9-SaR"/>
@@ -179,7 +178,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLI-1T-mFY" customClass="MZCircleButton">
-                                                <rect key="frame" x="285" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="390" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XLI-1T-mFY" secondAttribute="height" multiplier="1:1" id="0vx-V7-6D4"/>
@@ -194,10 +193,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-f4-lrn">
-                                        <rect key="frame" x="0.0" y="285" width="360" height="75"/>
+                                        <rect key="frame" x="0.0" y="390" width="500" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3v-Ct-Z5D" customClass="MZCircleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="a3v-Ct-Z5D" secondAttribute="height" multiplier="1:1" id="JOb-Zd-9ZU"/>
@@ -210,7 +209,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="715-uu-mNU" customClass="MZCircleButton">
-                                                <rect key="frame" x="95" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="130" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="715-uu-mNU" secondAttribute="height" multiplier="1:1" id="qEm-Ar-zoz"/>
@@ -223,7 +222,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0I-zn-Fmx" customClass="MZCircleButton">
-                                                <rect key="frame" x="190" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="260" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="f0I-zn-Fmx" secondAttribute="height" multiplier="1:1" id="BOt-Nb-yhV"/>
@@ -236,7 +235,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvH-dD-R0t" customClass="MZCircleButton">
-                                                <rect key="frame" x="285" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="390" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="uvH-dD-R0t" secondAttribute="height" multiplier="1:1" id="c3x-J0-nvE"/>
@@ -251,29 +250,26 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="300" constant="360" id="4As-j1-vXf"/>
-                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Choose a colour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ooi-zF-WAH">
-                                <rect key="frame" x="225" y="62.5" width="150" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jR1-cD-f7T" secondAttribute="bottom" constant="50" id="Ec2-pz-RFx"/>
-                            <constraint firstItem="jR1-cD-f7T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="EpD-EY-Pc1"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="jR1-cD-f7T" secondAttribute="trailing" constant="30" id="PDs-ze-A8y"/>
-                            <constraint firstItem="Ooi-zF-WAH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="aNZ-aY-uN3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jR1-cD-f7T" secondAttribute="bottom" constant="30" id="Ec2-pz-RFx"/>
+                            <constraint firstItem="jR1-cD-f7T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="EpD-EY-Pc1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jR1-cD-f7T" secondAttribute="trailing" constant="30" id="PDs-ze-A8y"/>
+                            <constraint firstItem="jR1-cD-f7T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="QwR-p6-dJG"/>
                             <constraint firstItem="jR1-cD-f7T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gnu-6D-etw"/>
+                            <constraint firstItem="jR1-cD-f7T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="300" constant="30" id="jKR-vr-zLj"/>
                             <constraint firstItem="jR1-cD-f7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sTa-Cf-zY5"/>
-                            <constraint firstItem="jR1-cD-f7T" firstAttribute="top" secondItem="Ooi-zF-WAH" secondAttribute="bottom" constant="30" id="vLS-Ve-gRp"/>
-                            <constraint firstItem="Ooi-zF-WAH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yzs-7R-L7v"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Choose a color" id="ULK-Y8-a1l">
+                        <barButtonItem key="leftBarButtonItem" image="left-arrow" id="5Wg-h9-jGM">
+                            <connections>
+                                <action selector="pop" destination="BYZ-38-t0r" id="Hat-fb-C2O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="circleButtons" destination="XLI-1T-mFY" id="V2h-lq-hEM"/>
                         <outletCollection property="circleButtons" destination="8cg-qB-rdD" id="rhp-KE-xFy"/>
@@ -283,7 +279,7 @@
                         <outletCollection property="circleButtons" destination="uvH-dD-R0t" id="kco-EE-PtJ"/>
                         <outletCollection property="circleButtons" destination="a3v-Ct-Z5D" id="SX2-MH-uWk"/>
                         <outletCollection property="circleButtons" destination="f0I-zn-Fmx" id="8uj-Aw-9EB"/>
-                        <segue destination="hJl-vg-UOT" kind="presentation" identifier="MaskZoomSegue" id="Ug8-Nr-9vI"/>
+                        <segue destination="MTj-kX-yLU" kind="presentation" identifier="MaskZoomSegue" id="Ug8-Nr-9vI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -311,7 +307,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="eMV-Gu-syX">
-                                <rect key="frame" x="165" y="246.5" width="270" height="108.5"/>
+                                <rect key="frame" x="165" y="246" width="270" height="108.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="R:0 G:0 B:0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm6-rr-1Af" userLabel="RGB">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="27.5"/>
@@ -333,30 +329,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-BC-mei">
-                                <rect key="frame" x="0.0" y="20" width="68" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <inset key="contentEdgeInsets" minX="12" minY="10" maxX="12" maxY="10"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="close:" destination="hJl-vg-UOT" eventType="touchUpInside" id="xDe-wV-pJf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZgQ-6C-Izy" firstAttribute="centerX" secondItem="hwV-B7-1I3" secondAttribute="centerX" id="9As-ER-jfn"/>
-                            <constraint firstItem="kRv-BC-mei" firstAttribute="top" secondItem="Ovw-n7-qFo" secondAttribute="bottom" id="GBB-gZ-aWx"/>
                             <constraint firstItem="eMV-Gu-syX" firstAttribute="width" secondItem="ZgQ-6C-Izy" secondAttribute="width" multiplier="0.9" id="Z3B-Ql-R6R"/>
                             <constraint firstItem="eMV-Gu-syX" firstAttribute="centerY" secondItem="ZgQ-6C-Izy" secondAttribute="centerY" id="kS0-ir-wg5"/>
                             <constraint firstItem="eMV-Gu-syX" firstAttribute="centerX" secondItem="ZgQ-6C-Izy" secondAttribute="centerX" id="nOk-gK-AIg"/>
-                            <constraint firstAttribute="leading" secondItem="kRv-BC-mei" secondAttribute="leading" id="nQh-SU-rIN"/>
                             <constraint firstItem="ZgQ-6C-Izy" firstAttribute="centerY" secondItem="hwV-B7-1I3" secondAttribute="centerY" id="wp3-tg-J8H"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dPn-uS-fNi">
+                        <barButtonItem key="leftBarButtonItem" image="left-arrow" id="2Ac-Dh-fQq">
+                            <connections>
+                                <action selector="dismiss" destination="hJl-vg-UOT" id="d3m-Sz-3c0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="circleView" destination="ZgQ-6C-Izy" id="KA1-MD-qro"/>
-                        <outlet property="closeButton" destination="kRv-BC-mei" id="dzq-GI-XWu"/>
                         <outlet property="colorLabelHSL" destination="Ywx-PO-eKz" id="is9-Df-6ME"/>
                         <outlet property="colorLabelHex" destination="6yy-5x-sMV" id="nSb-ex-IJk"/>
                         <outlet property="colorLabelRGB" destination="Wm6-rr-1Af" id="G1r-yS-b8T"/>
@@ -364,7 +355,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRw-WM-eBX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="353"/>
+            <point key="canvasLocation" x="1739" y="353"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6dg-Sj-K5n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MTj-kX-yLU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0s4-69-pCz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hJl-vg-UOT" kind="relationship" relationship="rootViewController" id="vSu-Nq-Hlv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhu-Jc-Bsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left-arrow" width="13" height="21"/>
+    </resources>
 </document>

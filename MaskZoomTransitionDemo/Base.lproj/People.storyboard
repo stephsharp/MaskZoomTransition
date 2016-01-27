@@ -74,7 +74,13 @@
                             <outlet property="delegate" destination="85e-ix-ZjR" id="InS-9Q-Ghd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="People" id="1m0-El-mrK"/>
+                    <navigationItem key="navigationItem" title="People" id="lFm-rE-tUC">
+                        <barButtonItem key="leftBarButtonItem" image="left-arrow" id="v4x-ec-uxz">
+                            <connections>
+                                <action selector="pop" destination="85e-ix-ZjR" id="tuo-rZ-UZF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cX9-SA-Qbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

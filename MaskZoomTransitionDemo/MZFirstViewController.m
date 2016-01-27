@@ -9,7 +9,7 @@
 #import "MZFirstViewController.h"
 #import "MZMaskZoomTransitioningDelegate.h"
 #import "MZSecondViewController.h"
-//#import "UIViewController+MZContentViewController.h"
+#import "UIViewController+MZContentViewController.h"
 
 @interface MZFirstViewController ()
 
@@ -37,6 +37,11 @@
     [self performSegueWithIdentifier:@"MaskZoomSegue" sender:sender];
 }
 
+- (IBAction)pop
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -44,7 +49,7 @@
 //    UIViewController *contentViewController = segue.destinationViewController.mz_contentViewController;
 
     if ([[segue identifier] isEqualToString:@"MaskZoomSegue"]) {
-        MZSecondViewController *secondVC = (MZSecondViewController *)segue.destinationViewController;
+        MZSecondViewController *secondVC = (MZSecondViewController *)segue.destinationViewController.mz_contentViewController;
         UIButton *button = (UIButton *)sender;
 
         secondVC.circleColor = button.backgroundColor;
