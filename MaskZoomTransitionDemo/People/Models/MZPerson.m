@@ -20,6 +20,7 @@
                             phone:(NSString *)phone
                thumbnailImageName:(NSString *)thumbnailImageName
                  profileImageName:(NSString *)profileImageName
+                    authenticated:(BOOL)authenticated
 {
     self = [super init];
     if (self) {
@@ -33,13 +34,14 @@
         _phone = phone;
         _thumbnailImageName = thumbnailImageName;
         _profileImageName = profileImageName;
+        _authenticated = authenticated;
     }
     return self;
 }
 
 - (instancetype)init
 {
-    return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil thumbnailImageName:nil profileImageName:nil];
+    return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil thumbnailImageName:nil profileImageName:nil authenticated:NO];
 }
 
 @end

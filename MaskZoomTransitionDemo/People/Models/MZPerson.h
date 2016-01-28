@@ -20,6 +20,7 @@
 @property (nonatomic) NSString *phone;
 @property (nonatomic) NSString *thumbnailImageName;
 @property (nonatomic) NSString *profileImageName;
+@property (nonatomic, getter=isAuthenticated) BOOL authenticated;
 
 - (instancetype)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastName
@@ -30,6 +31,7 @@
                            mobile:(NSString *)mobile
                             phone:(NSString *)phone
                thumbnailImageName:(NSString *)thumbnailImageName
-                 profileImageName:(NSString *)profileImageName NS_DESIGNATED_INITIALIZER;
+                 profileImageName:(NSString *)profileImageName
+                    authenticated:(BOOL)authenticated NS_DESIGNATED_INITIALIZER;
 
 @end

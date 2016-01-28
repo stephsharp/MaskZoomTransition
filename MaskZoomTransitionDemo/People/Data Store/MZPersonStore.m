@@ -35,7 +35,8 @@
                                                        mobile:p[@"mobile"]
                                                         phone:p[@"phone"]
                                            thumbnailImageName:p[@"thumbnailImage"]
-                                             profileImageName:p[@"profileImage"]]];
+                                             profileImageName:p[@"profileImage"]
+                                                authenticated:[p[@"authenticated"] boolValue]]];
     }
 
     return [people copy];

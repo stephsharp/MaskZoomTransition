@@ -37,7 +37,6 @@ static CGFloat MZProfileImageMaxHeight;
 @property (weak, nonatomic) IBOutlet UIButton *myAddressBookButton;
 
 @property (nonatomic) CGFloat profileImageOriginalHeight;
-@property (nonatomic, readonly) BOOL isMe;
 
 @end
 
@@ -109,7 +108,7 @@ static CGFloat MZProfileImageMaxHeight;
 
 - (void)setupProfileButtons
 {
-    UIView *profileButtonsView = self.isMe ? self.myProfileButtonsView : self.profileButtonsView;
+    UIView *profileButtonsView = self.profile.person.isAuthenticated ? self.myProfileButtonsView : self.profileButtonsView;
     [self.profileButtonsContainerView addSubview:profileButtonsView];
     [self.profileButtonsContainerView mz_addContainerConstraintsToSubview:profileButtonsView];
 }
@@ -122,11 +121,6 @@ static CGFloat MZProfileImageMaxHeight;
         _profileImageOriginalHeight = self.profileImageViewHeightConstraint.constant;
     }
     return _profileImageOriginalHeight;
-}
-
-- (BOOL)isMe
-{
-    return NO;
 }
 
 #pragma mark - UITableViewDelegate

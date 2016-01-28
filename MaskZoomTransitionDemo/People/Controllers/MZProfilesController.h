@@ -12,5 +12,6 @@
 @interface MZProfilesController : NSObject
 
 @property (nonatomic, readonly) NSArray *profiles; /* of MZProfile */
+@property (nonatomic, readonly) MZProfile *authenticatedUser;
 
 @end

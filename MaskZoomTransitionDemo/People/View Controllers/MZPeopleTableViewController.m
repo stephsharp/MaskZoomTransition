@@ -11,11 +11,13 @@
 #import "MZPersonCell.h"
 #import "UIViewController+MZContentViewController.h"
 #import "MZProfileViewController.h"
+#import "MZProfileButton.h"
 
 @interface MZPeopleTableViewController () <UITableViewDataSource, UITableViewDelegate, MZProfileViewControllerDelegate>
 
 @property (nonatomic) MZProfilesController *profilesController;
 @property (nonatomic) MZMaskZoomTransitioningDelegate * transitioningDelegate;
+@property (nonatomic) MZProfileButton *myProfileButton;
 
 @end
 
@@ -27,6 +29,10 @@
 
     self.profilesController = [MZProfilesController new];
     self.transitioningDelegate = [MZMaskZoomTransitioningDelegate new];
+
+    if (self.profilesController.authenticatedUser) {
+        [self addProfileButtonToNavigationBar];
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -82,10 +88,22 @@
             NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
             profileVC.profile = self.profilesController.profiles[indexPath.row];
         }
+        else if ([sender isEqual:self.myProfileButton]) {
+            self.transitioningDelegate.smallView = self.myProfileButton;
+            profileVC.profile = self.profilesController.authenticatedUser;
+        }
 
         segue.destinationViewController.transitioningDelegate = self.transitioningDelegate;
         segue.destinationViewController.modalPresentationStyle = UIModalPresentationCustom;
     }
+}
+
+- (void)addProfileButtonToNavigationBar
+{
+    self.myProfileButton = [[MZProfileButton alloc] initWithProfile:self.profilesController.authenticatedUser];
+    [self.myProfileButton addTarget:self action:@selector(profilePressed:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.myProfileButton];
 }
 
 #pragma mark - Actions
@@ -93,6 +111,11 @@
 - (IBAction)pop
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)profilePressed:(UIButton *)sender
+{
+    [self performSegueWithIdentifier:@"ProfileSegue" sender:sender];
 }
 
 #pragma mark - MZProfileViewControllerDelegate

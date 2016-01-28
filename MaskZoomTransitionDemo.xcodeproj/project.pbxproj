@@ -19,6 +19,7 @@
 		8284FB501C2123DA00CD7642 /* UIViewController+MZContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB4F1C2123DA00CD7642 /* UIViewController+MZContentViewController.m */; };
 		8284FB561C21295600CD7642 /* MZFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB551C21295600CD7642 /* MZFirstViewController.m */; };
 		8284FB591C21296100CD7642 /* MZSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284FB581C21296100CD7642 /* MZSecondViewController.m */; };
+		8298B37E1C5884430000C27A /* MZProfileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8298B37D1C5884430000C27A /* MZProfileButton.m */; };
 		82B6ACB21C235B8C00734CCC /* MZCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6ACB11C235B8C00734CCC /* MZCircleButton.m */; };
 		82B6AD331C4DF30A00734CCC /* Colours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B6AD311C4DF30A00734CCC /* Colours.storyboard */; };
 		82B6AD361C4DF3B400734CCC /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B6AD341C4DF3B400734CCC /* People.storyboard */; };
@@ -65,6 +66,8 @@
 		8284FB551C21295600CD7642 /* MZFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFirstViewController.m; sourceTree = "<group>"; };
 		8284FB571C21296100CD7642 /* MZSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSecondViewController.h; sourceTree = "<group>"; };
 		8284FB581C21296100CD7642 /* MZSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSecondViewController.m; sourceTree = "<group>"; };
+		8298B37C1C5884430000C27A /* MZProfileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZProfileButton.h; sourceTree = "<group>"; };
+		8298B37D1C5884430000C27A /* MZProfileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZProfileButton.m; sourceTree = "<group>"; };
 		82B6ACB01C235B8C00734CCC /* MZCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCircleButton.h; sourceTree = "<group>"; };
 		82B6ACB11C235B8C00734CCC /* MZCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCircleButton.m; sourceTree = "<group>"; };
 		82B6AD321C4DF30A00734CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Colours.storyboard; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				82B6AD8E1C4F591000734CCC /* MZCircleImageView.m */,
 				82B6ADE81C583ED800734CCC /* MZLineView.h */,
 				82B6ADE91C583ED800734CCC /* MZLineView.m */,
+				8298B37C1C5884430000C27A /* MZProfileButton.h */,
+				8298B37D1C5884430000C27A /* MZProfileButton.m */,
 				82B6AD8F1C4F591000734CCC /* MZPersonCell.h */,
 				82B6AD901C4F591000734CCC /* MZPersonCell.m */,
 				82B6ADE61C583ED800734CCC /* MZProfileCell.h */,
@@ -402,6 +407,7 @@
 				82B6ADA31C50290300734CCC /* MZPersonStore.m in Sources */,
 				8284FB2C1C21203500CD7642 /* main.m in Sources */,
 				82B6AD931C4F591000734CCC /* MZPerson.m in Sources */,
+				8298B37E1C5884430000C27A /* MZProfileButton.m in Sources */,
 				82B6AD941C4F591000734CCC /* NSString+MZProfile.m in Sources */,
 				82B6AD9A1C4F626E00734CCC /* MZProfile.m in Sources */,
 				82B6ADE51C583ECB00734CCC /* MZProfileViewController.m in Sources */,

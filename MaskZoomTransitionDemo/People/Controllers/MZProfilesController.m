@@ -9,6 +9,12 @@
 #import "MZProfilesController.h"
 #import "MZPersonStore.h"
 
+@interface MZProfilesController ()
+
+@property (nonatomic, readwrite) MZProfile *authenticatedUser;
+
+@end
+
 @implementation MZProfilesController
 
 - (instancetype)init
@@ -26,7 +32,14 @@
     NSMutableArray *profiles = [NSMutableArray array];
 
     for (MZPerson *person in store.people) {
-        [profiles addObject:[[MZProfile alloc] initWithPerson:person]];
+        MZProfile *profile = [[MZProfile alloc] initWithPerson:person];
+
+        if (person.isAuthenticated && !self.authenticatedUser) {
+            self.authenticatedUser = profile;
+        }
+        else {
+            [profiles addObject:profile];
+        }
     }
     return [profiles copy];
 }
