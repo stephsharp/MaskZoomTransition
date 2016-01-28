@@ -87,6 +87,11 @@ static CGFloat MZProfileImageMaxHeight;
     self.profileImageView.image = self.profile.profileImage;
 
     self.contactDetailsTableView.dataSource = self.profile;
+
+    // Hide delete button if viewing authenticated user
+    if (self.profile.person.isAuthenticated) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 - (void)addTableViewPanGestureRecognizerToView
@@ -161,12 +166,31 @@ static CGFloat MZProfileImageMaxHeight;
 
 - (IBAction)dismiss
 {
-    if (self.delegate) {
+    if ([self.delegate respondsToSelector:@selector(MZProfileViewControllerShouldDismiss:)]) {
         [self.delegate MZProfileViewControllerShouldDismiss:self];
     }
     else {
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+- (IBAction)delete
+{
+    NSString *title = [NSString stringWithFormat:@"Delete %@?", self.profile.person.firstName];
+    UIAlertController *deleteAlert = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        if ([self.delegate respondsToSelector:@selector(MZProfileViewControllerShouldDelete:)]) {
+            [self.delegate MZProfileViewControllerShouldDelete:self];
+            [self dismiss];
+        }
+    }];
+
+    [deleteAlert addAction:cancelAction];
+    [deleteAlert addAction:deleteAction];
+
+    [self presentViewController:deleteAlert animated:YES completion:nil];
 }
 
 @end

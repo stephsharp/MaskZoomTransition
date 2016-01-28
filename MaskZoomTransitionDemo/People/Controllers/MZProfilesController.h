@@ -14,4 +14,6 @@
 @property (nonatomic, readonly) NSArray *profiles; /* of MZProfile */
 @property (nonatomic, readonly) MZProfile *authenticatedUser;
 
+- (void)deleteProfile:(MZProfile *)profile;
+
 @end

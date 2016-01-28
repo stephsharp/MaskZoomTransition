@@ -14,7 +14,9 @@
 
 @protocol MZProfileViewControllerDelegate <NSObject>
 
+@optional
 - (void)MZProfileViewControllerShouldDismiss:(MZProfileViewController *)profileViewController;
+- (void)MZProfileViewControllerShouldDelete:(MZProfileViewController *)profileViewController;
 
 @end
 

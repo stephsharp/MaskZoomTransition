@@ -11,6 +11,7 @@
 
 @interface MZProfilesController ()
 
+@property (nonatomic, readwrite) NSArray *profiles;
 @property (nonatomic, readwrite) MZProfile *authenticatedUser;
 
 @end
@@ -42,6 +43,13 @@
         }
     }
     return [profiles copy];
+}
+
+- (void)deleteProfile:(MZProfile *)profile
+{
+    NSMutableArray *mutableProfiles = [self.profiles mutableCopy];
+    [mutableProfiles removeObject:profile];
+    self.profiles = [mutableProfiles copy];
 }
 
 @end

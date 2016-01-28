@@ -120,11 +120,11 @@
 
 #pragma mark - MZProfileViewControllerDelegate
 
-- (void)MZProfileViewControllerShouldDismiss:(MZProfileViewController *)profileViewController
+- (void)MZProfileViewControllerShouldDelete:(MZProfileViewController *)profileViewController
 {
-//    if (/* person was deleted */) {
-//        self.transitioningDelegate.dismissToZeroSize = YES;
-//    }
+    [self.profilesController deleteProfile:profileViewController.profile];
+    [self.tableView reloadData];
+    self.transitioningDelegate.dismissToZeroSize = YES;
 
     [self dismissViewControllerAnimated:YES completion:^{
         // Set dismissToZeroSize back to NO after transition completes.
