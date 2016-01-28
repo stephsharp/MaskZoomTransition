@@ -12,13 +12,13 @@
 		<key>location</key>
 		<string>Melbourne</string>
 		<key>department</key>
-		<string></string>
+		<string>Digital</string>
 		<key>email</key>
 		<string>ssharp@example.com</string>
 		<key>mobile</key>
 		<string>0434 838 787</string>
 		<key>phone</key>
-		<string></string>
+		<string>03 9472 7356</string>
 		<key>profileImage</key>
 		<string>stephanie-sharp</string>
 		<key>authenticated</key>
@@ -80,7 +80,7 @@
 		<key>mobile</key>
 		<string>0428 737 626</string>
 		<key>phone</key>
-		<string>02 4843 8785</string>
+		<string>03 9843 8785</string>
 		<key>profileImage</key>
 		<string>george-shelton</string>
 	</dict>
@@ -120,7 +120,7 @@
 		<key>mobile</key>
 		<string>0464 9392 5732</string>
 		<key>phone</key>
-		<string></string>
+		<string>07 8372 7622</string>
 		<key>profileImage</key>
 		<string></string>
 	</dict>
@@ -180,7 +180,7 @@
 		<key>mobile</key>
 		<string>0483 374 473</string>
 		<key>phone</key>
-		<string></string>
+		<string>03 8573 6126</string>
 		<key>profileImage</key>
 		<string></string>
 	</dict>
@@ -220,7 +220,7 @@
 		<key>mobile</key>
 		<string>0476 703 395</string>
 		<key>phone</key>
-		<string></string>
+		<string>02 8464 7362</string>
 		<key>profileImage</key>
 		<string>matthew-fuller</string>
 	</dict>
@@ -240,7 +240,7 @@
 		<key>mobile</key>
 		<string>0496 436 957</string>
 		<key>phone</key>
-		<string></string>
+		<string>03 8536 2652</string>
 		<key>profileImage</key>
 		<string>nicholas-palmer</string>
 	</dict>
