@@ -74,7 +74,7 @@
 
 + (UIColor *)mz_defaultTintColor
 {
-    return [UIColor mz_colorFromHexCode:@"007AFF"];
+    return [UIColor mz_colorFromHexCode:@"2979FF"];
 }
 
 + (UIColor *)mz_lightGreyColor
