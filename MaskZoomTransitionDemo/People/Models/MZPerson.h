@@ -18,7 +18,6 @@
 @property (nonatomic) NSString *email;
 @property (nonatomic) NSString *mobile;
 @property (nonatomic) NSString *phone;
-@property (nonatomic) NSString *thumbnailImageName;
 @property (nonatomic) NSString *profileImageName;
 @property (nonatomic, getter=isAuthenticated) BOOL authenticated;
 
@@ -30,7 +29,6 @@
                             email:(NSString *)email
                            mobile:(NSString *)mobile
                             phone:(NSString *)phone
-               thumbnailImageName:(NSString *)thumbnailImageName
                  profileImageName:(NSString *)profileImageName
                     authenticated:(BOOL)authenticated NS_DESIGNATED_INITIALIZER;
 

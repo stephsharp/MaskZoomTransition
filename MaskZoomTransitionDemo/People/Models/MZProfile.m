@@ -14,8 +14,6 @@ static NSString *const MZMobileTitle = @"mobile";
 static NSString *const MZPhoneTitle = @"work";
 static NSString *const MZEmailTitle = @"email";
 static NSString *const MZDepartmentTitle = @"department";
-
-static NSUInteger const MZThumbnailImageSize = 144;
 static NSUInteger const MZProfileImageSize = 450;
 
 @interface MZProfile ()
@@ -48,17 +46,6 @@ static NSUInteger const MZProfileImageSize = 450;
 - (NSString *)initials
 {
     return [NSString stringWithFormat:@"%@%@", [self.person.firstName mz_uppercaseInitial], [self.person.lastName mz_uppercaseInitial]];
-}
-
-- (UIImage *)thumbnailImage
-{
-    UIImage *image;
-
-    if (self.person.thumbnailImageName.length > 0) {
-        image = [UIImage imageNamed:self.person.thumbnailImageName];
-    }
-
-    return image ?: [self.initials mz_placeholderImageFromStringWithSize:MZThumbnailImageSize];
 }
 
 - (UIImage *)profileImage

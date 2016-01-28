@@ -19,10 +19,8 @@
 		<string>0434 838 787</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string>steph-profile-square</string>
 		<key>profileImage</key>
-		<string>steph-profile-square</string>
+		<string>stephanie-sharp</string>
 		<key>authenticated</key>
 		<true/>
 	</dict>
@@ -43,10 +41,8 @@
 		<string>0488 777 832</string>
 		<key>phone</key>
 		<string>02 7347 5555</string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>amelia-walker</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -65,10 +61,8 @@
 		<string>0472 275 742</string>
 		<key>phone</key>
 		<string>02 6743 5730</string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>diane-howell</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -87,10 +81,8 @@
 		<string>0428 737 626</string>
 		<key>phone</key>
 		<string>02 4843 8785</string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>george-shelton</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -109,10 +101,8 @@
 		<string>0486 033 688</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>julia-allen</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -130,8 +120,6 @@
 		<key>mobile</key>
 		<string>0464 9392 5732</string>
 		<key>phone</key>
-		<string></string>
-		<key>thumbnailImage</key>
 		<string></string>
 		<key>profileImage</key>
 		<string></string>
@@ -153,10 +141,8 @@
 		<string>0476 732 125</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>lauren-king</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -174,8 +160,6 @@
 		<key>mobile</key>
 		<string>0438 826 644</string>
 		<key>phone</key>
-		<string></string>
-		<key>thumbnailImage</key>
 		<string></string>
 		<key>profileImage</key>
 		<string></string>
@@ -197,8 +181,6 @@
 		<string>0483 374 473</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
 		<string></string>
 	</dict>
@@ -219,10 +201,8 @@
 		<string>0483 723 912</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>maria-garrett</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -241,10 +221,8 @@
 		<string>0476 703 395</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>matthew-fuller</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -263,10 +241,8 @@
 		<string>0496 436 957</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
-		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>nicholas-palmer</string>
 	</dict>
 	<dict>
 		<key>firstName</key>
@@ -285,10 +261,28 @@
 		<string>0484 836 964</string>
 		<key>phone</key>
 		<string></string>
-		<key>thumbnailImage</key>
+		<key>profileImage</key>
+		<string>thomas-lynch</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Vincent</string>
+		<key>lastName</key>
+		<string>Greene</string>
+		<key>role</key>
+		<string>Business Analyst</string>
+		<key>location</key>
+		<string>Brisbane</string>
+		<key>department</key>
+		<string></string>
+		<key>email</key>
+		<string>vgreene@example.com</string>
+		<key>mobile</key>
+		<string>0484 836 964</string>
+		<key>phone</key>
 		<string></string>
 		<key>profileImage</key>
-		<string></string>
+		<string>vincent-greene</string>
 	</dict>
 </array>
 </plist>

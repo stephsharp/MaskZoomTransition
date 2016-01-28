@@ -34,7 +34,6 @@
                                                         email:p[@"email"]
                                                        mobile:p[@"mobile"]
                                                         phone:p[@"phone"]
-                                           thumbnailImageName:p[@"thumbnailImage"]
                                              profileImageName:p[@"profileImage"]
                                                 authenticated:[p[@"authenticated"] boolValue]]];
     }

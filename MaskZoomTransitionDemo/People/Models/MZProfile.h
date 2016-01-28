@@ -15,7 +15,6 @@
 
 @property (nonatomic, readonly) NSString *displayName;
 @property (nonatomic, readonly) NSString *initials;
-@property (nonatomic, readonly) UIImage *thumbnailImage;
 @property (nonatomic, readonly) UIImage *profileImage;
 
 - (instancetype)initWithPerson:(MZPerson *)person;

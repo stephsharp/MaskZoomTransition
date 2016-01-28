@@ -45,7 +45,7 @@ static CGFloat const MZDefaultSize = 28.0f;
 - (void)setPhoto
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self setImage:self.profile.thumbnailImage forState:UIControlStateNormal];
+        [self setImage:self.profile.profileImage forState:UIControlStateNormal];
         [self addBorder];
     });
 }

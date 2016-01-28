@@ -18,7 +18,6 @@
                             email:(NSString *)email
                            mobile:(NSString *)mobile
                             phone:(NSString *)phone
-               thumbnailImageName:(NSString *)thumbnailImageName
                  profileImageName:(NSString *)profileImageName
                     authenticated:(BOOL)authenticated
 {
@@ -32,7 +31,6 @@
         _email = email;
         _mobile = mobile;
         _phone = phone;
-        _thumbnailImageName = thumbnailImageName;
         _profileImageName = profileImageName;
         _authenticated = authenticated;
     }
@@ -41,7 +39,7 @@
 
 - (instancetype)init
 {
-    return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil thumbnailImageName:nil profileImageName:nil authenticated:NO];
+    return [self initWithFirstName:nil lastName:nil role:nil location:nil department:nil email:nil mobile:nil phone:nil profileImageName:nil authenticated:NO];
 }
 
 @end
