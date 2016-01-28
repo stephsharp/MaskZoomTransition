@@ -1,5 +1,5 @@
 //
-//  MZSecondViewController.h
+//  MZColorViewController.h
 //  MaskZoomTransitionDemo
 //
 //  Created by Steph Sharp on 16/12/2015.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MZMaskZoomTransitioningDelegate.h"
 
-@interface MZSecondViewController : UIViewController <MZMaskZoomTransitionPresentedViewController>
+@interface MZColorViewController : UIViewController <MZMaskZoomTransitionPresentedViewController>
 
 @property (nonatomic) UIColor *circleColor;
 

@@ -1,5 +1,5 @@
 //
-//  MZFirstViewController.h
+//  MZColorsViewController.h
 //  MaskZoomTransitionDemo
 //
 //  Created by Steph Sharp on 16/12/2015.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MZFirstViewController : UIViewController
+@interface MZColorsViewController : UIViewController
 
 @end

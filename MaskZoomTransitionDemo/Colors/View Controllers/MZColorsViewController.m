@@ -1,24 +1,24 @@
 //
-//  MZFirstViewController.m
+//  MZColorsViewController.m
 //  MaskZoomTransitionDemo
 //
 //  Created by Steph Sharp on 16/12/2015.
 //  Copyright © 2015 Stephanie Sharp. All rights reserved.
 //
 
-#import "MZFirstViewController.h"
+#import "MZColorsViewController.h"
 #import "MZMaskZoomTransitioningDelegate.h"
-#import "MZSecondViewController.h"
+#import "MZColorViewController.h"
 #import "UIViewController+MZContentViewController.h"
 
-@interface MZFirstViewController ()
+@interface MZColorsViewController ()
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *circleButtons;
 @property (nonatomic) MZMaskZoomTransitioningDelegate *transitioningDelegate;
 
 @end
 
-@implementation MZFirstViewController
+@implementation MZColorsViewController
 
 #pragma mark - Properties
 
@@ -46,13 +46,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    UIViewController *contentViewController = segue.destinationViewController.mz_contentViewController;
-
     if ([[segue identifier] isEqualToString:@"MaskZoomSegue"]) {
-        MZSecondViewController *secondVC = (MZSecondViewController *)segue.destinationViewController.mz_contentViewController;
+        MZColorViewController *colorVC = (MZColorViewController *)segue.destinationViewController.mz_contentViewController;
         UIButton *button = (UIButton *)sender;
 
-        secondVC.circleColor = button.backgroundColor;
+        colorVC.circleColor = button.backgroundColor;
         self.transitioningDelegate.smallView = button;
 
         segue.destinationViewController.transitioningDelegate = self.transitioningDelegate;

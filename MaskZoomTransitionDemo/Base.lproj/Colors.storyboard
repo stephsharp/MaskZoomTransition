@@ -9,7 +9,7 @@
         <!--Choose a colour-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MZFirstViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MZColorsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -286,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="353"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="OIb-oP-fvN">
             <objects>
-                <viewController id="hJl-vg-UOT" customClass="MZSecondViewController" sceneMemberID="viewController">
+                <viewController id="hJl-vg-UOT" customClass="MZColorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ovw-n7-qFo"/>
                         <viewControllerLayoutGuide type="bottom" id="9tR-Ml-o5I"/>
