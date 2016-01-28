@@ -26,7 +26,7 @@
 
     UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0.0f);
 
-    // Set background colour
+    // Set background color
     [[MZTheme globalTintColor] setFill];
     UIRectFill(rect);
 

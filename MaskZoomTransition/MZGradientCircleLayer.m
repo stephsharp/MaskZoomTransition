@@ -17,11 +17,11 @@
     CGFloat innerCircleRadius = gradientRadius - self.gradientWidth;
 
     CGColorSpaceRef baseColorSpace = CGColorSpaceCreateDeviceRGB();
-    CGFloat colours[8] = { 0.0f, 0.0f, 0.0f, 1.0f,
+    CGFloat colors[8] = { 0.0f, 0.0f, 0.0f, 1.0f,
                            0.0f, 0.0f, 0.0f, 0.0f
                          };
-    CGFloat colourLocations[2] = { 0.0f, 1.0f };
-    CGGradientRef gradient = CGGradientCreateWithColorComponents(baseColorSpace, colours, colourLocations, 2);
+    CGFloat colorLocations[2] = { 0.0f, 1.0f };
+    CGGradientRef gradient = CGGradientCreateWithColorComponents(baseColorSpace, colors, colorLocations, 2);
 
     CGContextDrawRadialGradient(context, gradient, origin, innerCircleRadius, origin, gradientRadius, kCGGradientDrawsBeforeStartLocation);
 
