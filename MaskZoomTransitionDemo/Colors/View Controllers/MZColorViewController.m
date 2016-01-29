@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *circleView;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelRGB;
-@property (weak, nonatomic) IBOutlet UILabel *colorLabelHSL;
+@property (weak, nonatomic) IBOutlet UILabel *colorLabelHSB;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabelHex;
 
 @end
@@ -42,15 +42,15 @@
 - (void)setColorLabels
 {
     CGFloat r = 0.0, g = 0.0, b = 0.0;
-    CGFloat h = 0.0, s = 0.0, l = 0.0;
+    CGFloat h = 0.0, s = 0.0, br = 0.0;
     [self.circleColor getRed:&r green:&g blue:&b alpha:NULL];
-    [self.circleColor getHue:&h saturation:&s brightness:&l alpha:NULL];
+    [self.circleColor getHue:&h saturation:&s brightness:&br alpha:NULL];
 
     int red = r * 255, green = g * 255, blue = b * 255;
-    int hue = h * 100, saturation = s * 100, lightness = l * 100;
+    int hue = h * 100, saturation = s * 100, brightness = br * 100;
 
     self.colorLabelRGB.text = [NSString stringWithFormat:@"R:%d G:%d B:%d", red, green, blue];
-    self.colorLabelHSL.text = [NSString stringWithFormat:@"H:%d S:%d L:%d", hue, saturation, lightness];
+    self.colorLabelHSB.text = [NSString stringWithFormat:@"H:%d S:%d B:%d", hue, saturation, brightness];
     self.colorLabelHex.text = [NSString stringWithFormat:@"#%02X%02X%02X", red, green, blue];
 }
 
@@ -67,7 +67,7 @@
 
 - (NSArray *)viewsToFadeIn
 {
-    return @[self.colorLabelRGB, self.colorLabelHSL, self.colorLabelHex];
+    return @[self.colorLabelRGB, self.colorLabelHSB, self.colorLabelHex];
 }
 
 - (UIView *)largeView

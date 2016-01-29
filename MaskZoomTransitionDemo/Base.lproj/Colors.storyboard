@@ -315,7 +315,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="H: 0 S:0 L:0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-PO-eKz" userLabel="HSL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="H: 0 S:0 B:0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-PO-eKz" userLabel="HSB">
                                         <rect key="frame" x="0.0" y="40.5" width="270" height="27.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -348,7 +348,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="circleView" destination="ZgQ-6C-Izy" id="KA1-MD-qro"/>
-                        <outlet property="colorLabelHSL" destination="Ywx-PO-eKz" id="is9-Df-6ME"/>
+                        <outlet property="colorLabelHSB" destination="Ywx-PO-eKz" id="KZt-W3-jyA"/>
                         <outlet property="colorLabelHex" destination="6yy-5x-sMV" id="nSb-ex-IJk"/>
                         <outlet property="colorLabelRGB" destination="Wm6-rr-1Af" id="G1r-yS-b8T"/>
                     </connections>
