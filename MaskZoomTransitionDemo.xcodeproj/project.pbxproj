@@ -44,7 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8284FB271C21203500CD7642 /* MaskZoomTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaskZoomTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8284FB271C21203500CD7642 /* MaskZoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaskZoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8284FB2B1C21203500CD7642 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8284FB2D1C21203500CD7642 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8284FB2E1C21203500CD7642 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		8284FB281C21203500CD7642 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8284FB271C21203500CD7642 /* MaskZoomTransitionDemo.app */,
+				8284FB271C21203500CD7642 /* MaskZoom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 			);
 			name = MaskZoomTransitionDemo;
 			productName = MaskZoomTransitionDemo;
-			productReference = 8284FB271C21203500CD7642 /* MaskZoomTransitionDemo.app */;
+			productReference = 8284FB271C21203500CD7642 /* MaskZoom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -565,7 +565,7 @@
 				INFOPLIST_FILE = MaskZoomTransitionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssharp.MaskZoomTransitionDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MaskZoom;
 			};
 			name = Debug;
 		};
@@ -576,7 +576,7 @@
 				INFOPLIST_FILE = MaskZoomTransitionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssharp.MaskZoomTransitionDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MaskZoom;
 			};
 			name = Release;
 		};
