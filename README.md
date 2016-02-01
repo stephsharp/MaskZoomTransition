@@ -2,7 +2,7 @@
 
 A Material Design-style transition, inspired by [this animation](https://dribbble.com/shots/1744157-User-Profile-Interface-Animation) from Dmytro Prudnikov.
 
-<img src="MaskZoomTransition.gif" height="600" />
+<img src="MaskZoomTransition.gif" width="336" />
 
 
 ##Definitions
