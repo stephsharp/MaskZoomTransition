@@ -4,18 +4,23 @@ A Material Design-inspired transition, based on [this animation](https://dribbbl
 
 <img src="MaskZoomTransition.gif" height="600" />
 
+
+##Definitions
+
+#####smallView
+
+The small view in the presenting view controller we are transitioning from.
+
+#####largeView
+
+The large view in the presented view controller we are transitioning to.
+
+#####viewsToFadeIn
+
+The views in the presented view controller that fade in at the end of the transition. (Optional)
+
+
 ##Usage
-
-###Definitions
-
-`smallView` The small view in the presenting view controller we are transitioning from.
-
-`largeView` The large view in the presented view controller we are transitioning to.
-
-`viewsToFadeIn` The views in the presented view controller that fade in at the end of the transition. (Optional)
-
-
-###Example
 
 In the presenting view controller, initialise a property for the transitioning delegate:
 
@@ -45,13 +50,19 @@ Implement the `MZMaskZoomTransitionPresentedViewController` protocol in the pres
       return self.someLargeView; // The view you are transitioning to.
     }
 
-###Other options
+##Other options
 
-`duration` Default duration is 0.25 seconds.
+#####duration
 
-`presenting` Default is YES. It's set to NO when dismissing a view controller (see `MZMaskZoomTransitioningDelegate`).
+Default duration is 0.25 seconds.
 
-`dismissToZeroSize` Default is NO. Set to YES if you want the dismiss transition to shrink the view down to zero. This is useful if the `smallView` in the presenting view controller is no longer visible (e.g. item was deleted).
+#####presenting
+
+Default is YES. It's set to NO when dismissing a view controller (see `MZMaskZoomTransitioningDelegate`).
+
+#####dismissToZeroSize
+
+Default is NO. Set to YES if you want the dismiss transition to shrink the view down to zero. This is useful if the `smallView` in the presenting view controller is no longer visible (e.g. item was deleted).
 
 
 ##Installation
