@@ -39,9 +39,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    UITextView *textView;
-    textView.textContainerInset = UIEdgeInsetsMake(0, 50, 0, 0);
-
     return 1;
 }
 
