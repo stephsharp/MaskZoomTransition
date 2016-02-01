@@ -21,17 +21,17 @@
     UIViewController *presentedContentViewController = presented.mz_contentViewController;
     [presentedContentViewController.view layoutIfNeeded];
 
-    return [self circleTransitionWithViewController:presentedContentViewController presenting:YES];
+    return [self maskZoomTransitionWithViewController:presentedContentViewController presenting:YES];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
     UIViewController *dismissedContentViewController = dismissed.mz_contentViewController;
 
-    return [self circleTransitionWithViewController:dismissedContentViewController presenting:NO];
+    return [self maskZoomTransitionWithViewController:dismissedContentViewController presenting:NO];
 }
 
-- (MZMaskZoomTransition *)circleTransitionWithViewController:(UIViewController *)viewController presenting:(BOOL)presenting
+- (MZMaskZoomTransition *)maskZoomTransitionWithViewController:(UIViewController *)viewController presenting:(BOOL)presenting
 {
     MZMaskZoomTransition *animator;
 
