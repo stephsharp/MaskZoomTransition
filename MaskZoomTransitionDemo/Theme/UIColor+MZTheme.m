@@ -35,41 +35,6 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-+ (UIColor *)mz_colorFromR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b
-{
-    return [UIColor mz_colorFromR:r G:g B:b A:1.0];
-}
-
-+ (UIColor *)mz_colorFromR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b A:(CGFloat)a
-{
-    return [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a];
-}
-
-// http://stackoverflow.com/a/11598127/1367622
-- (UIColor *)mz_lighterColor
-{
-    CGFloat r, g, b, a;
-    if ([self getRed:&r green:&g blue:&b alpha:&a]) {
-        return [UIColor colorWithRed:MIN(r + 0.25f, 1.0f)
-                               green:MIN(g + 0.25f, 1.0f)
-                                blue:MIN(b + 0.25f, 1.0f)
-                               alpha:a];
-    }
-    return nil;
-}
-
-- (UIColor *)mz_darkerColor
-{
-    CGFloat r, g, b, a;
-    if ([self getRed:&r green:&g blue:&b alpha:&a]) {
-        return [UIColor colorWithRed:MAX(r - 0.25f, 0.0f)
-                               green:MAX(g - 0.25f, 0.0f)
-                                blue:MAX(b - 0.25f, 0.0f)
-                               alpha:a];
-    }
-    return nil;
-}
-
 #pragma mark - Theme colors
 
 + (UIColor *)mz_defaultTintColor
