@@ -5,22 +5,22 @@ A Material Design-style transition, inspired by [this animation](https://dribbbl
 <img src="MaskZoomTransition.gif" width="336" />
 
 
-##Definitions
+## Definitions
 
-#####smallView
+##### smallView
 
 The small view in the presenting view controller to transition from.
 
-#####largeView
+##### largeView
 
 The large view in the presented view controller to transition to.
 
-#####viewsToFadeIn
+##### viewsToFadeIn
 
 The views in the presented view controller that fade in at the end of the transition. (Optional)
 
 
-##Usage
+## Usage
 
 In the presenting view controller, initialise a property for the transitioning delegate:
 
@@ -50,31 +50,31 @@ Implement the `MZMaskZoomTransitionPresentedViewController` protocol in the pres
       return self.someLargeView; // The view you are transitioning to.
     }
 
-##Other options
+## Other options
 
-#####duration
+##### duration
 
 Default duration is 0.25 seconds.
 
-#####presenting
+##### presenting
 
 Default is YES. It's set to NO when dismissing a view controller (see `MZMaskZoomTransitioningDelegate`).
 
-#####dismissToZeroSize
+##### dismissToZeroSize
 
 Default is NO. Set to YES if you want the dismiss transition to shrink the view down to zero. This is useful if the `smallView` in the presenting view controller is no longer visible (e.g. item was deleted).
 
 
-##Installation
+## Installation
 
-###CocoaPods
+### CocoaPods
 
 To install via CocoaPods, add to your podfile:
 
     pod 'MaskZoomTransition', '~> 0.1'
 
 
-##Acknowledgements
+## Acknowledgements
 
 - Transition inspired by Dmytro Prudnikov's [User Profile Interface Animation](https://dribbble.com/shots/1744157-User-Profile-Interface-Animation) (found [here](http://blog.webbb.be/material-design-animation-examples/))
 - Avatars from [Placeit](https://blog.placeit.net/free-avatar-pack/)
@@ -82,6 +82,6 @@ To install via CocoaPods, add to your podfile:
 - Colours chosen from [Google's Material Design spec](https://www.google.com/design/spec/style/color.html#color-color-palette) and [flatuicolorpicker.com](http://www.flatuicolorpicker.com)
 
 
-##License
+## License
 
 MaskZoomTransition is released under the MIT license. See LICENSE for details.
